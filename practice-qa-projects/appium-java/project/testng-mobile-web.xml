@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Mobile web tests. Default platform: desktop-chromium (no emulator needed).
+     mvn test                                        (desktop Chrome in phone emulation through Appium)
+     mvn test -Dplatform=android-chrome              (Chrome on an Android emulator) -->
+<suite name="Appium - mobile web" verbose="1">
+  <test name="Mobile web">
+    <classes>
+      <class name="com.k11.mobile.tests.MobileWebShopTests"/>
+    </classes>
+  </test>
+</suite>

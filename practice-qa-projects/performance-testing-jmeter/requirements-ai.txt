@@ -1,0 +1,3 @@
+# Only needed for the optional AI steps (ai_summary.py --call, perf_agent.py --ai).
+# Everything else in this tutorial uses the Python standard library.
+anthropic>=2.9.0

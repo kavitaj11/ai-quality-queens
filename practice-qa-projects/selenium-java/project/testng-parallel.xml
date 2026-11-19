@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Parallel: test methods run on 3 threads, each with its own browser (ThreadLocal in DriverFactory).
+     Run with: mvn test -Dsuite=testng-parallel.xml -->
+<suite name="K11 Shop - parallel" parallel="methods" thread-count="3" data-provider-thread-count="2" verbose="1">
+  <test name="TestNG tests in parallel">
+    <packages>
+      <package name="com.k11.shop.tests"/>
+    </packages>
+  </test>
+</suite>

@@ -1,0 +1,5 @@
+# Test runs: large, machine-specific, regenerate any time
+results/
+__pycache__/
+*.pyc
+jmeter.log

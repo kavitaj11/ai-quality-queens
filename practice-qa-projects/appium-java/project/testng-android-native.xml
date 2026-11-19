@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Native Android tests (Settings app). Needs an emulator and the UiAutomator2 driver:
+     mvn test -Dsuite=testng-android-native.xml -Dplatform=android-native -DdeviceName=emulator-5554 -->
+<suite name="Appium - Android native" verbose="1">
+  <test name="Android Settings">
+    <classes>
+      <class name="com.k11.mobile.tests.AndroidSettingsTests"/>
+    </classes>
+  </test>
+</suite>

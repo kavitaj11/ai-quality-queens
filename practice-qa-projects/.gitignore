@@ -1,0 +1,18 @@
+# Build and test output for all tutorials
+target/
+test-results/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# SQLite database written by the practice shop
+*.db
+
+# Local environments, credentials and generated evaluation output
+.venv/
+venv/
+node_modules/
+.env
+.env.*
+!.env.example
+artifacts/

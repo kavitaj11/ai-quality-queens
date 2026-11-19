@@ -1,0 +1,7 @@
+CREATE TABLE orders (id INTEGER PRIMARY KEY, subtotal INTEGER NOT NULL, fee INTEGER);
+INSERT INTO orders VALUES (1,4999,499),(2,5000,0),(3,5001,499),(4,0,NULL);
+SELECT id, subtotal, fee,
+       CASE WHEN subtotal >= 5000 THEN 0 ELSE 499 END AS expected_fee
+FROM orders
+WHERE fee IS NULL OR fee <> CASE WHEN subtotal >= 5000 THEN 0 ELSE 499 END
+ORDER BY id;

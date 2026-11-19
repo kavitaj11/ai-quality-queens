@@ -1,0 +1,16 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Shipping calculator</title>
+<h1>Shipping calculator</h1>
+<label for="subtotal">Subtotal (cents)</label><input id="subtotal" type="number" min="0" step="1">
+<button id="calculate">Calculate shipping</button><p role="status"></p>
+<script>
+const subtotal = document.querySelector('#subtotal');
+const result = document.querySelector('[role=status]');
+document.querySelector('#calculate').onclick = () => {
+  const cents = subtotal.valueAsNumber;
+  result.textContent = 'Calculating…';
+  setTimeout(() => {
+    result.textContent = !Number.isInteger(cents) || cents < 0 ? 'Invalid subtotal'
+      : cents >= 5000 ? 'Free shipping' : 'Shipping: 499 cents';
+  }, 100);
+};
+</script></html>

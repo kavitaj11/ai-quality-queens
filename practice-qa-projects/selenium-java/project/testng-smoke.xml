@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Fast feedback: only tests in the "smoke" group. Run with: mvn test -Dsuite=testng-smoke.xml -->
+<suite name="K11 Shop - smoke" verbose="1">
+  <test name="Smoke">
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
+    <packages>
+      <package name="com.k11.shop.tests"/>
+    </packages>
+  </test>
+</suite>

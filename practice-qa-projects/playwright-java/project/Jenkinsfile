@@ -1,0 +1,39 @@
+// Declarative Jenkins pipeline for the Playwright Java framework.
+// Uses Microsoft's Playwright Java image (browsers and OS libraries preinstalled).
+// Pick the image tag that matches the Playwright version in pom.xml.
+pipeline {
+  agent {
+    docker { image 'mcr.microsoft.com/playwright/java:v1.58.0-noble' }
+  }
+  parameters {
+    string(name: 'TAGS', defaultValue: '@smoke', description: 'Cucumber tag expression, e.g. @smoke or @regression and not @wip')
+  }
+  environment {
+    BASE_URL = 'http://127.0.0.1:8091'
+    SHOP_PASSWORD = credentials('shop-test-password')   // from Jenkins credentials, never hard-coded
+  }
+  stages {
+    stage('Start app under test') {
+      steps {
+        sh '''
+          python3 practice-qa-projects/practice-apps/shop-web/shop_web.py &
+          for i in $(seq 1 20); do curl -sf $BASE_URL/health && break; sleep 1; done
+        '''
+      }
+    }
+    stage('Tests') {
+      steps {
+        dir('practice-qa-projects/playwright-java/project') {
+          sh 'mvn -B test -Dcucumber.filter.tags="${TAGS}"'
+        }
+      }
+    }
+  }
+  post {
+    always {
+      junit 'practice-qa-projects/playwright-java/project/target/surefire-reports/*.xml'
+      archiveArtifacts artifacts: 'practice-qa-projects/playwright-java/project/target/cucumber-report.html, practice-qa-projects/playwright-java/project/target/playwright-artifacts/**',
+                       allowEmptyArchive: true
+    }
+  }
+}

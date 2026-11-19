@@ -1,0 +1,53 @@
+# Optional template: copy to .github/workflows/practice-ai-qe.yml at the repository root.
+name: AI QE lab
+
+on:
+  pull_request:
+    paths:
+      - 'practice-qa-projects/ai-quality-engineering/**'
+      - '.github/workflows/practice-ai-qe.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'practice-qa-projects/ai-quality-engineering/**'
+      - '.github/workflows/practice-ai-qe.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-quality-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.11', '3.13']
+    defaults:
+      run:
+        working-directory: practice-qa-projects/ai-quality-engineering/project
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Contract, evaluator, safety and mutation tests
+        run: python -m unittest discover -s tests -v
+      - name: Evaluate golden conversations
+        run: python -m aiqe run --repeats 3 --seed 7 --output artifacts/current
+      - name: Compare with reviewed baseline
+        run: python -m aiqe compare --baseline data/baseline.json --candidate artifacts/current/report.json
+      - name: Exercise calibration calculation without a model
+        run: python -m aiqe calibrate --judge fixture
+      - name: Publish evaluation artifacts
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6
+        with:
+          name: ai-qe-python-${{ matrix.python }}
+          path: practice-qa-projects/ai-quality-engineering/project/artifacts/
+          if-no-files-found: warn
+          retention-days: 7
+

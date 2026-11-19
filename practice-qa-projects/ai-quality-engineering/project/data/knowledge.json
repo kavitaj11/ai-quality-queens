@@ -1,0 +1,7 @@
+[
+  {"id":"returns","keywords":["return","refund"],"sentences":["The return window is 14 days.","A proof of purchase is required."]},
+  {"id":"warranty","keywords":["warranty","repair"],"sentences":["The limited warranty lasts 12 months.","Accidental damage is not covered."]},
+  {"id":"battery","keywords":["battery","power"],"sentences":["Reduce screen brightness to save battery.","Enable low power mode for longer battery life."]},
+  {"id":"privacy","keywords":["privacy","personal information"],"sentences":["Remove personal information before sending a device for service.","Never share account credentials with support."]}
+]
+

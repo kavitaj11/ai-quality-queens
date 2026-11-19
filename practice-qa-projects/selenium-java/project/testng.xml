@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Everything: TestNG tests and Cucumber scenarios. Run with: mvn test -->
+<suite name="K11 Shop - all tests" verbose="1">
+  <test name="TestNG tests">
+    <packages>
+      <package name="com.k11.shop.tests"/>
+    </packages>
+  </test>
+  <test name="Cucumber scenarios">
+    <classes>
+      <class name="com.k11.shop.bdd.CucumberRunner"/>
+    </classes>
+  </test>
+</suite>

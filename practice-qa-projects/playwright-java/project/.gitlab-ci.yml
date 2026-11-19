@@ -1,0 +1,33 @@
+# GitLab CI for the Playwright Java framework (copy to the repository root and adjust paths).
+# SHOP_PASSWORD is a masked CI/CD variable set in the project settings, never committed.
+stages: [test]
+
+variables:
+  BASE_URL: "http://127.0.0.1:8091"
+  PROJECT_DIR: "practice-qa-projects/playwright-java/project"
+
+smoke:
+  stage: test
+  image: mcr.microsoft.com/playwright/java:v1.58.0-noble   # match the Playwright version in pom.xml
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+  script:
+    - python3 practice-qa-projects/practice-apps/shop-web/shop_web.py &
+    - for i in $(seq 1 20); do curl -sf $BASE_URL/health && break; sleep 1; done
+    - cd $PROJECT_DIR && mvn -B test -Dcucumber.filter.tags="@smoke"
+  artifacts:
+    when: always
+    reports:
+      junit: $PROJECT_DIR/target/surefire-reports/*.xml
+    paths:
+      - $PROJECT_DIR/target/cucumber-report.html
+      - $PROJECT_DIR/target/playwright-artifacts/
+
+regression:
+  extends: smoke
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "schedule"
+  script:
+    - python3 practice-qa-projects/practice-apps/shop-web/shop_web.py &
+    - for i in $(seq 1 20); do curl -sf $BASE_URL/health && break; sleep 1; done
+    - cd $PROJECT_DIR && mvn -B test
