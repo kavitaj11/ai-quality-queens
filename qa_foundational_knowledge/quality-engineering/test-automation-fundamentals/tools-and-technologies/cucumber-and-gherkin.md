@@ -1,5 +1,7 @@
 # Cucumber and Gherkin
 
+**Hands-on project** · [BDD with Cucumber lab](../../../../practice-qa-projects/selenium-java/06-bdd-with-cucumber.md)
+
 > **Learning objective** · Express one business decision as executable examples.
 
 ## ◈ Describe the decision in domain language

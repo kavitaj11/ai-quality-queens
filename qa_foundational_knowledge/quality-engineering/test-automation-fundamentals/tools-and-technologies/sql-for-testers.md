@@ -1,5 +1,7 @@
 # SQL for testers
 
+**Hands-on project** · [SQL and data pipeline testing lab](../../../../practice-qa-projects/data-quality-testing-lab/)
+
 > **Learning objective** · Design a small dataset that exposes join, aggregation and ranking errors.
 
 ## ◈ Lab setup · SQLite

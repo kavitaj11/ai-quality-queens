@@ -4,11 +4,11 @@ Use three views of the same order to connect a business requirement to a browser
 
 ## Study sequence
 
-| Lesson | Question it helps answer |
-|---|---|
-| 1. [Cucumber and Gherkin](cucumber-and-gherkin.md) | Can a product owner recognize the business rule in the example? |
-| 2. [Selenium WebDriver](selenium-webdriver.md) | Can a customer complete the interaction and see its outcome? |
-| 3. [SQL for testers](sql-for-testers.md) | Did the application save the expected state for this order? |
+| Lesson | Question it helps answer | Hands-on project |
+|---|---|---|
+| 1. [Cucumber and Gherkin](cucumber-and-gherkin.md) | Can a product owner recognize the business rule in the example? | [BDD with Cucumber lab](../../../../practice-qa-projects/selenium-java/06-bdd-with-cucumber.md) |
+| 2. [Selenium WebDriver](selenium-webdriver.md) | Can a customer complete the interaction and see its outcome? | [Selenium with Java practice project](../../../../practice-qa-projects/selenium-java/) |
+| 3. [SQL for testers](sql-for-testers.md) | Did the application save the expected state for this order? | [SQL and data pipeline testing lab](../../../../practice-qa-projects/data-quality-testing-lab/) |
 
 ## Worked example
 
