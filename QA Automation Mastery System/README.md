@@ -24,3 +24,16 @@ Follow the [24-week planner](planner.md) for a weekly sequence, or choose a modu
 | [17 · Interview Prep](modules/17-interview-prep.md) | 24 |
 
 The lesson pages include the default displayed reference or example. For alternate language tabs and interactive quizzes, the [interactive source artboard](https://claude.ai/artifact/HM3XUAEuQ29DSb9ckCWt6s#artboard-787b4c38acdc) provides the original interactive experience.
+
+## Interactive dashboard and GitHub Pages
+
+The [dashboard source](web/) builds a static site from this curriculum. It supports topic search, lesson completion, weekly planning, and flashcard practice. This browser stores your progress on this device.
+
+To preview from the repository root with Python 3:
+
+```sh
+python3 "QA Automation Mastery System/web/build.py" _site
+python3 -m http.server 8000 --directory _site
+```
+
+Open http://localhost:8000. To publish, choose **Settings → Pages → Build and deployment → GitHub Actions**. Run [Deploy QA Automation Mastery to Pages](https://github.com/kavitaj11/ai-quality-queens/actions/workflows/mastery-pages.yml). Later changes to this curriculum rebuild the site automatically. The deployment job shows the published URL.
