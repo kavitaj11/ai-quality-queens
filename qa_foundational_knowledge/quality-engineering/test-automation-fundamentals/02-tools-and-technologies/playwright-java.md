@@ -1,8 +1,10 @@
 # Playwright with Java and APIRequestContext
 
-Does an API result agree with the browser and stored record?
+**Hands-on project** · [Playwright with Java and APIRequestContext lab](../../../../practice-qa-projects/playwright-java/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/playwright-java/README.md) · [09 · API Testing](../../../../QA%20Automation%20Mastery%20System/modules/09-api-testing.md)
+**QA Automation Mastery** · [09 · API Testing](../../../../QA%20Automation%20Mastery%20System/modules/09-api-testing.md)
+
+Does an API result agree with the browser and stored record?
 
 ## What to test
 

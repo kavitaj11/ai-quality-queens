@@ -1,8 +1,10 @@
 # Appium with Java
 
-Does the mobile journey work in the intended context?
+**Hands-on project** · [Appium with Java lab](../../../../practice-qa-projects/appium-java/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/appium-java/README.md) · [08 · Frameworks & BDD](../../../../QA%20Automation%20Mastery%20System/modules/08-frameworks-bdd.md)
+**QA Automation Mastery** · [08 · Frameworks & BDD](../../../../QA%20Automation%20Mastery%20System/modules/08-frameworks-bdd.md)
+
+Does the mobile journey work in the intended context?
 
 ## What to test
 

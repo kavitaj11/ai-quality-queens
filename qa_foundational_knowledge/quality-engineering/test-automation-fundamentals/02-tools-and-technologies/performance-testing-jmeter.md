@@ -1,8 +1,10 @@
 # Apache JMeter
 
-At what workload does a customer journey breach its target?
+**Hands-on project** · [Apache JMeter lab](../../../../practice-qa-projects/performance-testing-jmeter/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/performance-testing-jmeter/README.md) · [11 · Non-Functional Testing](../../../../QA%20Automation%20Mastery%20System/modules/11-non-functional-testing.md)
+**QA Automation Mastery** · [11 · Non-Functional Testing](../../../../QA%20Automation%20Mastery%20System/modules/11-non-functional-testing.md)
+
+At what workload does a customer journey breach its target?
 
 ## What to test
 

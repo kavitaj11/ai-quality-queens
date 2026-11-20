@@ -1,8 +1,10 @@
 # Playwright with Python and pytest
 
-Did the browser render the state returned by the service?
+**Hands-on project** · [Playwright with Python and pytest lab](../../../../practice-qa-projects/playwright-python/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/playwright-python/README.md) · [07 · Playwright](../../../../QA%20Automation%20Mastery%20System/modules/07-playwright.md)
+**QA Automation Mastery** · [07 · Playwright](../../../../QA%20Automation%20Mastery%20System/modules/07-playwright.md)
+
+Did the browser render the state returned by the service?
 
 ## What to test
 

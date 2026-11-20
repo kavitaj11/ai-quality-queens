@@ -1,8 +1,10 @@
 # AI evaluation and agent traces
 
-Did the agent take the expected action and support its answer?
+**Hands-on project** · [AI evaluation and agent traces lab](../../../../practice-qa-projects/ai-quality-engineering/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/ai-quality-engineering/README.md) · [16 · AI Testing & LLM Evaluation](../../../../QA%20Automation%20Mastery%20System/modules/16-ai-testing-llm-evaluation.md)
+**QA Automation Mastery** · [16 · AI Testing & LLM Evaluation](../../../../QA%20Automation%20Mastery%20System/modules/16-ai-testing-llm-evaluation.md)
+
+Did the agent take the expected action and support its answer?
 
 ## What to test
 

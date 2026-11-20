@@ -1,8 +1,10 @@
 # Grafana k6
 
-Did the system meet its latency and error targets at the intended arrival rate?
+**Hands-on project** · [Grafana k6 lab](../../../../practice-qa-projects/performance-testing-k6/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/performance-testing-k6/README.md) · [11 · Non-Functional Testing](../../../../QA%20Automation%20Mastery%20System/modules/11-non-functional-testing.md)
+**QA Automation Mastery** · [11 · Non-Functional Testing](../../../../QA%20Automation%20Mastery%20System/modules/11-non-functional-testing.md)
+
+Did the system meet its latency and error targets at the intended arrival rate?
 
 ## What to test
 

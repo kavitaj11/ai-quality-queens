@@ -1,8 +1,10 @@
 # AWS and Google Cloud storage testing
 
-Do provider adapters preserve the same storage contract?
+**Hands-on project** · [AWS and Google Cloud storage testing lab](../../../../practice-qa-projects/cloud-testing-aws-gcp/README.md)
 
-[Hands-on lab](../../../../practice-qa-projects/cloud-testing-aws-gcp/README.md) · [10 · CI/CD & Infrastructure](../../../../QA%20Automation%20Mastery%20System/modules/10-ci-cd-infrastructure.md)
+**QA Automation Mastery** · [10 · CI/CD & Infrastructure](../../../../QA%20Automation%20Mastery%20System/modules/10-ci-cd-infrastructure.md)
+
+Do provider adapters preserve the same storage contract?
 
 ## What to test
 
