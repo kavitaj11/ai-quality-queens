@@ -6,6 +6,12 @@
 
 > **Learning objective** · Synchronize a browser assertion with the result a shopper actually sees.
 
+## How WebDriver observes a browser
+
+A WebDriver session connects test code to a particular browser. A locator describes how to find an element in the current document. A successful lookup establishes that an element exists at that moment. The application may still be fetching data, replacing the element or rendering the result of an earlier action.
+
+Design an interaction as three separate decisions: identify the intended control, perform the user action once, then wait for a meaningful outcome. An explicit wait polls a condition up to a deadline. Choose a condition tied to the current operation, such as the expected order ID appearing in a confirmation. Waiting only for a visible panel can succeed while it still displays the previous order. Keep the expected business value in the test so a reader can tell what the interaction was meant to prove.
+
 ## ◈ Trace a browser interaction
 
 The shipping calculator renders its status element before the quote is ready. A successful click proves the browser accepted the action. The test still needs evidence that the application finished the calculation.

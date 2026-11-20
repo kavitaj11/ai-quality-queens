@@ -6,6 +6,12 @@
 
 > **Learning objective** · Design a small dataset that exposes join, aggregation and ranking errors.
 
+## How relational data becomes test evidence
+
+Before writing a query, define the **grain**: what one row represents in each table and in the expected result. A customer may have several orders, so joining customers to orders can repeat a customer once per order. A primary key identifies a row; a foreign key expresses its relationship to another table. Names and display labels can coincide and are poor substitutes for those keys.
+
+Join choice determines which cases are observable. An inner join drops customers without orders. A left join preserves those customers with nulls on the order side. After a left join, counting a non-null order key yields zero for an empty group, while counting all joined rows yields one. Predict the result for a customer with zero orders and another with multiple orders before running the query. These fixtures reveal errors that a one-customer, one-order dataset would hide.
+
 ## ◈ Lab setup · SQLite
 
 Run these blocks in order in an empty SQLite database. Two customers share a name and one has no orders. Those details reveal errors that a fixture with unique names and one order per customer would miss.

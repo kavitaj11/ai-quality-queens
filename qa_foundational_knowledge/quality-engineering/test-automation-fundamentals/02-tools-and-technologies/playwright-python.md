@@ -6,6 +6,12 @@
 
 Did the browser render the state returned by the service?
 
+## Browser isolation, fixtures and observable state
+
+Playwright organizes browser automation into a browser process, isolated browser contexts and pages. A context supplies a separate client session, including cookies and local storage. Server-side records can still be shared across contexts. pytest fixtures give setup and cleanup an explicit lifetime. Match the context and test-data lifetimes to the behavior under test so parallel workers cannot accidentally inherit another user's state.
+
+Locators describe elements as the page changes. A web-first assertion waits for a specified observation, which helps when rendering follows a network response. Decide what the observation establishes. A mocked response can isolate how the UI handles an empty result. A run against the service additionally exercises the boundary between client and server. Select the setup according to the failure you want the test to detect.
+
 ## What to test
 
 Use a fresh browser context and seed a known order. Capture its ID before navigating. Assert the order-specific status and inspect the trace when the UI disagrees with the service response.

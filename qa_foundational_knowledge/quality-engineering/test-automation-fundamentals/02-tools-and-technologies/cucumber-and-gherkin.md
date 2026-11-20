@@ -6,6 +6,12 @@
 
 > **Learning objective** · Express one business decision as executable examples.
 
+## How an executable specification works
+
+Behavior-driven development begins with a conversation about an observable business rule. Gherkin gives that conversation a readable structure. **Given** describes the starting state, **When** identifies the event or decision under examination, and **Then** states the outcome a stakeholder can recognize. Agree on that outcome before writing automation. Otherwise a team can automate a misunderstanding and still get a passing result.
+
+Cucumber connects each step to a step definition. The definition prepares a fixture, performs an action or checks an observation. Keep UI selectors and service calls inside that implementation so a change in delivery mechanism does not force a rewrite of the business rule. Use a Scenario Outline when several inputs exercise the same decision. Give genuinely different rules their own scenarios so a failure names the behavior that changed.
+
 ## ◈ Describe the decision in domain language
 
 A feature groups related behavior. Each scenario establishes context with **Given**, performs the action with **When**, and states an observable result with **Then**. A scenario outline applies that sequence to each row in its Examples table.
