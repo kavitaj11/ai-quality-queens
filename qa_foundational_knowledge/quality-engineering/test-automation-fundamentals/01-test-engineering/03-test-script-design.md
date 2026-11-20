@@ -5,6 +5,12 @@
 
 > **Learning objective** · Write a check that fails for the intended defect and explains the failure.
 
+## Why a script can pass with a defect present
+
+A useful script must reach the changed behavior, produce an observable difference when that behavior is wrong and compare the difference against an independent expectation. A script can execute every intended step and still miss a defect if its final assertion checks only that a response arrived. Work backward from the defect you want to detect to the observation that would distinguish a correct run from an incorrect one.
+
+Separate setup, action and assertion so a reader can locate the source of a failure. Isolate records and control variable inputs such as time when they affect the result. For asynchronous behavior, wait for a condition tied to the current operation. A bounded wait makes the timing assumption explicit and provides a useful failure point. The mutation exercise later in this lesson lets you check whether the assertion actually detects the targeted change.
+
 ## Arrange, act, assert
 
 For a shipping boundary test, arrange a cart worth exactly 5,000 cents, request the quote once, and assert the fee in cents. Keep the expected value visible beside the input. Computing the expectation with the same function used by the application would allow a shared defect to pass.

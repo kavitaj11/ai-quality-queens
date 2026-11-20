@@ -5,6 +5,12 @@
 
 > **Learning objective** · Choose a test level and data setup for a specific business risk.
 
+## How to choose an automated check
+
+An automated check needs **controllability**, the ability to arrange the relevant starting conditions, and **observability**, the ability to see the outcome that matters. The **test oracle** is the basis for deciding whether that outcome is correct. Write down the expected behavior from a requirement, reference calculation or agreed invariant before deciding which tool will measure it.
+
+Use equivalence partitioning to group inputs that should follow the same rule. Boundary analysis then targets points where the rule changes. Choose a test level that can expose the suspected failure: a function call isolates a calculation, a service call exercises the interface that carries it, and a browser check observes what reaches the user. Each level supports a different claim about the same feature.
+
 ## Start with one rule
 
 A shop charges 500 cents for shipping on subtotals below 5,000 cents. At exactly 5,000 cents, shipping becomes free. A shopper could lose money if the implementation uses the wrong comparison operator. This gives the test a purpose and an independent source for its expected result.

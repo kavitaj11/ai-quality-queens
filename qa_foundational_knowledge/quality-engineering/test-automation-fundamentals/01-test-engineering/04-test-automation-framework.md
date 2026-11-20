@@ -5,6 +5,12 @@
 
 > **Learning objective** · Trace a test through setup, execution, reporting and cleanup.
 
+## How framework boundaries keep tests maintainable
+
+A framework provides shared infrastructure for running tests. Separate responsibilities according to what makes them change. Business expectations change when requirements change. Page objects and service clients change when interfaces change. Fixtures change when the way tests acquire and release resources changes. Keeping these decisions in distinct places lets a reviewer see whether a maintenance edit altered the meaning of a test.
+
+Every stateful resource needs an owner and a lifetime. A suite can share immutable configuration, while a writable cart or browser session may need to belong to a single test invocation. Design the failure path alongside the successful path: identify what evidence must survive teardown, which resources exist after partial setup, and how the runner reports a cleanup error without hiding the first failure.
+
 ## Follow one checkout test
 
 A runner selects the checkout test. A fixture creates a cart in the configured environment. A page object enters the subtotal and reads the displayed fee. The test compares that fee with the business expectation. Teardown closes the browser and removes the cart, including when the assertion fails.

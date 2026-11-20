@@ -5,6 +5,12 @@
 
 > **Learning objective** · Turn a release objective into coverage, ownership and evidence.
 
+## How risk shapes a test strategy
+
+A product risk pairs a possible failure with its consequence. Prioritization depends on the severity of that consequence, how often users encounter the affected path and what the change makes more likely. Existing evidence matters too: a passing component suite may settle a calculation question while leaving a handoff between services unexamined.
+
+A strategy explains which risks deserve coverage and why each test level can expose them. The execution plan turns those choices into work for a particular release: builds, environments, owners and timing. Record the residual risk after selecting coverage. If a dependency becomes unavailable, the team can then tell which release claim has lost its supporting evidence.
+
 ## Frame the decision
 
 Suppose a checkout release changes how discounted subtotals qualify for free shipping. First establish which subtotal the business rule uses and which systems calculate, display and store the fee. An unresolved rounding rule affects the expected result at every layer. Resolve it with the product owner before estimating the boundary cases.

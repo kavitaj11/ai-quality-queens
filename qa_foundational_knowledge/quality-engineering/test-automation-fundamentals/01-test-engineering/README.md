@@ -2,6 +2,12 @@
 
 Learn to turn a business rule into a repeatable test and use the result to make a release decision. Start here if you can describe a feature but are unsure what to automate first.
 
+## What a test result establishes
+
+Test engineering starts with a question about behavior and ends with a decision someone can act on. A requirement describes the intended behavior. A risk explains what could go wrong and who would notice. A test connects the two by arranging a known starting state, exercising the system and comparing an observation with an independently justified expectation.
+
+A passing result supports a limited claim about the inputs, environment and build that were exercised. A failure gives the team a discrepancy to investigate. The five lessons follow the decisions behind those results: which observations to automate, which risks to cover first, how to make a check sensitive to a defect, how to run it reliably and how to interpret the resulting evidence.
+
 ## How to use this guide
 
 Carry one checkout change through all five lessons. You can complete the design exercises with a text editor. The optional Java example in lesson 3 illustrates an executable assertion. For the core case, use one eligible item, USD integer cents, a $5 shipping fee and a $50 threshold. Lesson 2 introduces a discount as a change request.

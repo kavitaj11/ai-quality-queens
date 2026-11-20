@@ -5,6 +5,12 @@
 
 > **Learning objective** · Decide whether a test phase can start or finish using evidence.
 
+## How to turn completion criteria into a decision
+
+A test phase answers a particular question. Entry criteria identify the prerequisites for a result that can answer it. Exit criteria specify the observations and unresolved risks the decision owner will accept. Define the scope of each criterion in advance, including the affected build, required journeys, evidence source and person accountable for exceptions.
+
+Distinguish an executed failure from a blocked or unexecuted check. A failure supplies evidence of a discrepancy. A blocked check leaves an evidence gap. Both can affect the release decision, but they require different next actions. When reading a percentage, identify its denominator and look up the status of the critical journeys individually. The worked run below shows how an apparently high pass rate can coexist with a missing release prerequisite.
+
 ## Agree on evidence before execution
 
 Entry criteria establish the conditions for a meaningful run. Exit criteria define what evidence the next decision requires. Set thresholds with the people accountable for the release. A pass rate alone can hide an untested critical journey.
