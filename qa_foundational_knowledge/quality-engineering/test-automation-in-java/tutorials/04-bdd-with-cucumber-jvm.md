@@ -2,6 +2,8 @@
 
 **Intermediate** · [Guide and prerequisites](../README.md) · [Worked example](../examples/cucumber/src/test/resources/guide/shipping.feature)
 
+**QA Automation Mastery** · [Gherkin & step definitions](../../../../QA%20Automation%20Mastery%20System/lessons/08-frameworks-bdd/18-gherkin-step-definitions.md)
+
 ## How behavior-driven development reaches Java
 
 BDD starts with a rule that product and engineering can explain in shared language. Gherkin captures the relevant context, event and observable outcome. Cucumber matches each step to Java glue code; that code creates the fixture, performs the action or checks the result. Keep scenario state scoped to a single scenario so execution order cannot change its meaning.

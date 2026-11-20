@@ -2,6 +2,8 @@
 
 **Intermediate** · [Guide and prerequisites](../README.md) · [Worked example](../examples/selenium/ShippingBrowser.java)
 
+**QA Automation Mastery** · [Waits: implicit vs explicit](../../../../QA%20Automation%20Mastery%20System/lessons/06-selenium/08-waits-implicit-vs-explicit.md)
+
 ## Synchronize with a state transition
 
 Browser commands and application work follow different timelines. A click can complete while a request, debounce timer or render is still pending. An explicit wait polls an observable condition within a time limit. Its usefulness depends on whether the condition distinguishes the new state from the old one.

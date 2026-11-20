@@ -2,6 +2,8 @@
 
 [Java automation guide](../README.md) · [Shipping rule](../examples/java/Shipping.java) · [Executable test](../examples/java/ShippingTest.java)
 
+**QA Automation Mastery** · [Variables, data types & collections](../../../../QA%20Automation%20Mastery%20System/lessons/03-language-deep-dives/17-variables-data-types-collections.md)
+
 ## How a Java program becomes an automated check
 
 Java source declares classes and methods. The compiler checks types and produces bytecode; the Java Virtual Machine loads those classes and executes them. A method signature tells you what inputs a caller can supply. The return type tells you what kind of value to inspect. The requirement tells you which value is correct. An exception is also an observable outcome when the contract calls for rejecting an input.

@@ -2,6 +2,8 @@
 
 **Advanced** · [Guide and prerequisites](../README.md) · [Worked example](../examples/sql/shipping.sql)
 
+**QA Automation Mastery** · [Database validation](../../../../QA%20Automation%20Mastery%20System/lessons/02-test-harness-setup/14-database-validation.md)
+
 ## Query the invariant at the right grain
 
 First define what one row represents and which key identifies the entity under test. Then translate the business invariant into a query that returns violations. An empty result supports a pass only after confirming that the intended fixture exists and that the query examined the required population.

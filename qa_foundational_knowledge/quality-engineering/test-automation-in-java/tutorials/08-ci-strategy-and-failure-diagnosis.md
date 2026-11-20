@@ -2,6 +2,8 @@
 
 **Advanced** · [Guide and prerequisites](../README.md) · [Worked example](../examples/ci/check.yml)
 
+**QA Automation Mastery** · [GitHub Actions for test suites](../../../../QA%20Automation%20Mastery%20System/lessons/10-ci-cd-infrastructure/01-github-actions-for-test-suites.md)
+
 ## Design a pipeline that explains its verdict
 
 A CI gate turns process results into a decision about a particular revision. Order checks by dependency, feedback time and diagnostic value. A compilation failure prevents execution; a fixture failure prevents an assertion; an assertion failure supplies evidence about behavior. Report the stage reached so reviewers know which claim the run actually evaluated.

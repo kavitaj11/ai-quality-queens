@@ -2,6 +2,8 @@
 
 **Beginner** · [Guide and prerequisites](../README.md) · [Worked example](../examples/java/ShippingTest.java)
 
+**QA Automation Mastery** · [Test design techniques](../../../../QA%20Automation%20Mastery%20System/lessons/01-foundations/03-test-design-techniques.md)
+
 ## Derive inputs from the contract
 
 An equivalence partition groups inputs for which the specification requires the same behavior. A boundary separates two such groups. Start by stating the unit, the valid range and whether each endpoint is included. For discrete inputs, exercise the endpoint and its nearest representable neighbors. Decide separately how to cover missing values or invalid formats when the interface accepts them.

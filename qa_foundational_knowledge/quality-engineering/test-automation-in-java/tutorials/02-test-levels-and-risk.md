@@ -2,6 +2,8 @@
 
 **Beginner** · [Guide and prerequisites](../README.md) · [Worked example](../examples/java/Shipping.java)
 
+**QA Automation Mastery** · [The test pyramid & strategy](../../../../QA%20Automation%20Mastery%20System/lessons/01-foundations/01-the-test-pyramid-strategy.md)
+
 ## Match the test level to the failure mechanism
 
 The level of a test describes the boundary it exercises. A unit check can isolate a decision inside one method. A component or integration check can reveal disagreement between collaborators. An end-to-end check follows a user-visible outcome across the assembled system. Moving outward introduces more dependencies and more possible explanations for a failure.

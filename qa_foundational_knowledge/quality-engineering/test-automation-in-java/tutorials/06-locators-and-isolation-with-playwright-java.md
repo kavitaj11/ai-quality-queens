@@ -2,6 +2,8 @@
 
 **Intermediate** · [Guide and prerequisites](../README.md) · [Worked example](../examples/playwright/ShippingBrowser.java)
 
+**QA Automation Mastery** · [Browser, Context & Page](../../../../QA%20Automation%20Mastery%20System/lessons/07-playwright/03-browser-context-page.md)
+
 ## Element identity and session boundaries
 
 A locator describes how to identify an element when an operation runs. Roles and accessible names can encode the user’s intent even when elements are recreated during rendering. Scope the locator when names repeat. A row-specific Edit button has a clearer identity than the third Edit button on a changing page.
