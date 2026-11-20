@@ -17,7 +17,11 @@
 
 ## The queen’s strategy for AI quality
 
-A chess queen can cover a rank, file, or diagonal. Choosing a move means deciding which line matters now and which square still needs protection. Practice that decision in QA with one checkout puzzle: a customer qualifies for free shipping, yet the invoice includes a fee. Which check would you run first, and what would its result tell you?
+AI systems can be nondeterministic. Give an assistant the same checkout requirement twice and it may generate different test cases, choose different tools, or reach the same verdict for different reasons. One successful run tells you what happened once. To judge reliability, repeat the task under recorded conditions and ask which outcomes must hold on every run.
+
+That is where the queen’s range matters. **Move along one line** by holding the input, model version, and tool setup fixed and comparing repeated runs. **Change direction** by varying one condition, such as the cart subtotal, to see where the verdict changes. **Follow the diagonal across systems** by tracing the assistant’s claim through its tool calls to the customer’s invoice. Each move answers a different question: how often does the behavior recur, what triggers it, and did the system actually do what the assistant says?
+
+Try those moves on one puzzle. An assistant marks checkout as passing because the screen shows “Free shipping,” yet the invoice includes a fee. The assistant’s path may vary. The shipping rule gives you a stable expectation against which to judge every path.
 
 1. **Opening · Establish the rule.** Shipping is free on subtotals of $50 or more. Before running a test, predict the fee at $49.99, $50.00, and $50.01. Ask an AI assistant to propose cases, then compare its choices with yours. If it skips exactly $50.00, which pricing defect could slip through?
 2. **Middlegame · Choose the next check.** For the same $50 order, the browser displays “Free shipping.” Inspect the quote API. If it returns a fee, investigate why the display and quote disagree. If it returns zero, follow the order ID into billing and find where the fee first appears. In either position, one observation narrows your next move.
