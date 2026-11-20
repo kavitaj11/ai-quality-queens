@@ -17,19 +17,17 @@
 
 ## The queen’s strategy for AI quality
 
-A chess queen has range, but bringing her out before developing the other pieces can cost several moves as she retreats under attack. The same discipline matters in AI testing. Before asking a model to judge quality, establish the rule, the test data, and the evidence you would trust enough to challenge its verdict.
+A chess queen can cover a rank, file, or diagonal. Choosing a move means deciding which line matters now and which square still needs protection. Practice that decision in QA with one checkout puzzle: a customer qualifies for free shipping, yet the invoice includes a fee. Which check would you run first, and what would its result tell you?
 
-- **Opening · Develop the fundamentals.** Suppose shipping becomes free at 5,000 cents. Test 4,999 and 5,000, then check the fee on the invoice. Those two examples give you a standard for reviewing any AI-generated cases. A suite can look thorough and still miss the exact point where the price changes.
-- **Middlegame · Challenge one assumption each day.** Write your prediction before running a test. If an AI assistant calls a slowdown a database problem, identify the measurement that would distinguish a database delay from a queue elsewhere. Keeping a short record of prediction, evidence, and revision builds the mental discipline to advance beyond familiar tools. When a topic feels out of reach, shrink it to one experiment you can explain to a peer.
-- **Endgame · Know when to pause.** A layoff or an uncertain hiring cycle can interrupt even a well-planned career. On a difficult day, a few quiet minutes of mindfulness or meditation can be a way to pause before choosing what feels manageable. That might mean tracing one failed test, calling a colleague, or simply resting. There is room in this community both to offer help and to receive it.
+1. **Opening · Establish the rule.** Shipping is free on subtotals of $50 or more. Before running a test, predict the fee at $49.99, $50.00, and $50.01. Ask an AI assistant to propose cases, then compare its choices with yours. If it skips exactly $50.00, which pricing defect could slip through?
+2. **Middlegame · Choose the next check.** For the same $50 order, the browser displays “Free shipping.” Inspect the quote API. If it returns a fee, investigate why the display and quote disagree. If it returns zero, follow the order ID into billing and find where the fee first appears. In either position, one observation narrows your next move.
+3. **Endgame · Decide whether the fix holds.** Replay all three boundary cases on the corrected build, then reconcile the checkout quote with the invoice for the original failing case. If an agent declares the fix successful, inspect its trace for that invoice check. A green pricing suite alone leaves the customer’s billing outcome open.
 
-### Mastering the Queen’s Power
+**Play a round with a partner.** Share a resolved defect’s requirement and first symptom. Keep the diagnosis hidden. Each player chooses one check and predicts what two possible results would mean. Reveal the evidence one piece at a time. At the end, compare which check narrowed the investigation most and add it to the guide for the next learner.
 
-Before moving your queen, ask yourself: *What can she threaten from here, and what will she stop defending?* Bring that question to a test review. Moving a slow checkout check from the browser to the API gives you faster feedback on pricing. Which browser check still proves that the customer can see the quoted price?
+### Learning through uncertainty
 
-**Try a queen fork.** A well-placed queen can threaten a rook and a knight at the same time. In the shipping lab, choose a cart that just qualifies for free shipping. Compare the quote at checkout with the fee on the invoice. If checkout promises free shipping but the invoice adds a fee, you have a concrete discrepancy to investigate.
-
-**Replay the position.** Chess players pause over a master game, choose a move, then study what happened. At your next QA Queens practice session, give a partner the requirement and the initial failure from a resolved bug. Keep the diagnosis hidden. Each of you writes down the check you would run next and what you expect to learn. Then reveal the original investigation and share a clue that changed your thinking.
+During a layoff or a difficult hiring cycle, a few quiet minutes of mindfulness or meditation can help you choose a manageable task. Trace one failed check, ask a colleague to review your reasoning, or take time to rest. This community makes room to give and receive that support.
 
 ## Make a move for the next learner
 
