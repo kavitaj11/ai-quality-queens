@@ -1,5 +1,7 @@
 # ♛ ai-quality-queens
 
+**[Open the AI Quality Queens learning site](https://kavitaj11.github.io/ai-quality-queens/#/)**
+
 [![AI Quality Queens — Building expertise. Advancing trustworthy AI.](assets/aiqq-banner.webp)](https://kavitaj11.github.io/ai-quality-queens/#/)
 
 **AI Quality Queens** is a community learning guide for testers, from designing a first boundary test to evaluating an AI agent’s decisions. The QA Queens here are our sisters and mothers. They are also the colleagues who review a first test script, share what they learned from a failed run, or make time for someone rebuilding a career. Our primary goal is to help the QA community while challenging ourselves to learn something each day.
