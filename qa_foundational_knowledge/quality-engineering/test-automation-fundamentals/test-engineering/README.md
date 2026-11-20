@@ -2,6 +2,12 @@
 
 Learn to turn a business rule into a repeatable test and use the result to make a release decision. Start here if you can describe a feature but are unsure what to automate first.
 
+## How to use this guide
+
+Carry one checkout change through all five lessons. You can complete the design exercises with a text editor. The optional Java example in lesson 3 illustrates an executable assertion. For the core case, use one eligible item, USD integer cents, a $5 shipping fee and a $50 threshold. Lesson 2 introduces a discount as a change request.
+
+Keep a small evidence log with the rule version, input, expected result, observed result, build and decision. Write expectations before inspecting the implementation. Each lesson adds something a teammate would need to reproduce or challenge your final recommendation.
+
 ## Study sequence
 
 | Lesson | What to produce |
