@@ -1,45 +1,60 @@
 # Agentic AI testing
 
-Design the decision rule for an agent that can choose its next test action. Start with the allowed actions and the observations each one requires.
+An agentic QA pipeline chooses its next action from the evidence collected so far. Evaluate three things independently: the system under test, the agent's decision and the side effect its tool actually produced. A correct explanation paired with the wrong scheduled job is a pipeline failure.
 
-**Learning objective** · Define what evidence permits a test agent to continue, stop or request review.
+## Worked release: a provider changes an order event
 
-## Worked example: Design a bounded performance experiment
+A provider proposes making a formerly required field optional. Its unit tests pass. A receipt consumer may still require the field, and a support assistant retrieves order records to answer customer questions. Start with the changed contract, provider commit, known consumer versions and the release policy. The following is a synthetic design exercise.
 
-A test agent can launch a workload, read its results and choose the next load level. The decision rule is part of the test design. Define the permitted environment, maximum load, required metrics and stop conditions before the first run. Keep the run ID, observations, decision and reason together so another engineer can reconstruct the sequence.
-
-| Observed state | Example decision | Evidence to retain |
+| Stage | Agent responsibility | Evidence required to proceed |
 |---|---|---|
-| Required metrics present and within limits | Advance to the next approved load level | Current load, p95 and error rate |
-| Latency exceeds the agreed limit | Stop escalation and summarize the breach | Threshold, observed value and run ID |
-| Required measurement missing | Mark the run inconclusive and request review | Missing field and collection status |
+| Plan | Map the field to known consumers and affected journeys. State where the dependency graph is incomplete. | Versioned impact list and risk rationale |
+| Authorize | Route the proposed action to the owner when risk or scope exceeds delegated authority. | Approval tied to the plan, commit and permitted environment |
+| Execute | Run independent checks in parallel. Keep unavailable consumers visible. | Per-check artifact, exact revision, outcome and coverage gaps |
+| Repair | Propose a bounded change after diagnosing the failure. | Failing fixture before repair, passing fixture after repair and an unaffected control |
+| Learn | Store the validated failure signature, repair scope and conditions for reuse. | Reviewed evidence and a regression case that detects recurrence |
+| Decide | Report blocking failures, missing evidence and the owner of the next action. | Reproducible verdict linked to the run and policy version |
 
-## Guided practice
+## Route tests across the delivery lifecycle
 
-An agent records 0% errors at 100 users but receives no latency samples. Should it advance to 200? Under the rule above, the missing measurement prevents a pass. Write a decision record that identifies the missing samples and the collection check needed before another run. Evaluate the agent on whether it chose the correct action and whether the record explains why.
+| Change signal | Agent-selected checks | Decision rule for this exercise |
+|---|---|---|
+| Pricing or eligibility rule | Unit boundaries, functional decision table, acceptance example | Block on a reproducible mismatch with the approved rule. |
+| Endpoint or event schema | API behavior, integration replay, cross-repository consumer contracts | A failing required consumer blocks. A missing consumer run leaves compatibility unresolved. |
+| Checkout UI or text | Browser journey, accessibility, localization, device compatibility | Require the intended state transition and required keyboard journey. Route subjective usability findings to a reviewer. |
+| Schema migration or batch job | Reconciliation by key, duplicate checks, rollback fixture | Hold when totals agree but records are assigned to the wrong customer. |
+| Permission or logging policy | Role-matrix fixtures, privacy and log-redaction assertions | A denied action must leave state intact and omit restricted fields from output. |
+| Capacity or retry policy | Load, endurance, reliability and recovery checks | Keep latency and recovery criteria separate. A fast retry that commits twice fails correctness. |
+| Retriever, model or prompt | Retrieval relevance, grounded answers, task success, fairness and robustness slices | Inspect slice sizes and labeled failures. Route sparse or disputed evidence to review. |
+| Broad or poorly specified change | Smoke suite, risk-selected regression, exploratory charter | Record which paths were exercised and assign unresolved acceptance questions to a person. |
 
-## Specify the agent's decision policy
+## Resolve conflicting evidence
 
-Use a simulated workload with approved user counts of 50, 100 and 200. For this exercise, p95 must be at most 800 ms and the error rate at most 1%. Evaluate a run only after both metrics arrive for the same completed run. A measured breach stops escalation. If a measurement is missing and no breach is already known, the agent requests review. Passing at the highest approved load completes the experiment.
+Suppose the provider passes 40 checks, the receipt consumer fails one contract, and the assistant evaluation has no examples with the field absent. A majority vote would mask the known break. Block on the required consumer contract, add a labeled missing-field case for the assistant, and rerun both on the proposed fix. A passing rerun on a different provider revision cannot close the original evidence gap.
 
-| Current load | p95 | Error rate | Expected action |
-|---:|---:|---:|---|
-| 50 | 720 ms | 0.2% | Schedule 100 users |
-| 100 | 800 ms | 1.0% | Schedule 200 users |
-| 100 | Missing | 0% | Request review |
-| 100 | 840 ms | Missing | Stop and record the known breach |
-| 200 | 780 ms | 0.4% | Complete the experiment |
+For variable model outputs, repeat a fixed evaluation to observe verdict dispersion. Record the distribution alongside the fixture and model version. Repeating a run cannot supply a missing consumer schema. Classify that gap as missing scope and obtain the artifact. When complete evidence still permits competing interpretations, route the case to the domain owner and retain the adjudication.
 
-## Check the action as well as the explanation
+For a conformal escalation policy, separate calibration cases from evaluation cases. Inspect empirical coverage, escalation rate and sample count within each uncertainty class. Treat a new model, a changed consumer population or a scarcely represented class as a reason to reassess calibration. A nominal coverage level is a population-level target, not a probability that one release is safe.
 
-Feed the agent one row at a time through a fake workload scheduler. Compare its decision and the scheduler's recorded calls. A “stop” explanation paired with a queued load increase fails the test. Deliver the same completed-run event twice and verify that only one next run is scheduled. For a missing metric, verify that the record names the absent field and that no new workload starts.
+## Test the orchestrator before trusting its verdict
 
-Keep one decision record per run with the policy version, run ID, observed load, metric values, selected action and scheduler receipt when a job was queued. This gives a reviewer enough information to distinguish an incorrect decision from a correct decision executed twice.
+Replay synthetic tool results with a scheduler that records calls. Deliver a completion event twice: the next job should be scheduled once. Return a stale artifact: the agent should reject the revision mismatch. Exhaust the repair budget: the run should stop and name a reviewer. Withhold approval: verify from the call log that the restricted action never ran. Score the selected action and the recorded tool calls separately.
 
-## Independent assignment
+## Capstone
 
-Build three synthetic run records: one within limits, one above the latency limit and one missing latency. Predict the decision for each before evaluating the agent. Check both the action and the reason recorded. Treat escalation on incomplete evidence as a failed case.
+Submit an impact map, risk-routed plan, three evidence artifacts from different testing areas, one negative control and a final decision record. Include a deliberately missing artifact. A peer should be able to replay the decision, name the blocking condition and identify the smallest new observation that could change the verdict.
 
-[Continue to the performance testing lab](../../../../practice-qa-projects/performance-testing-jmeter/10-agentic-qa-for-performance.md)
+## Research reading path
 
-[Related mastery module](../../../../QA%20Automation%20Mastery%20System/modules/15-autonomous-qa-pipelines.md) · [Fundamentals training guide](../README.md)
+Kavita Jadhav's six-paper IJECS series (2026) addresses six engineering decisions. The exercises here are teaching scenarios.
+
+| Decision | Paper and reference implementation |
+|---|---|
+| Which actions need human approval before execution? | [1. Autonomous CI/CD Quality Assurance Using LangGraph Multi-Agent Orchestration and Risk-Proportionate Human-in-the-Loop Control](https://doi.org/10.18535/ijecs/v15i06.5563) · [Code](https://github.com/K11-Software-Solutions/k11techlab-agentic-ai-qa-system) |
+| Which model behaviors should gate a pull request? | [2. LLM Safety as a Quality Gate: Integrating Bias, Fairness, and Robustness Evaluation into CI/CD via GitHub Apps](https://doi.org/10.18535/ijecs.v15i07.5576) · [Code](https://github.com/K11-Software-Solutions/llm-eval-agent-app) |
+| When has a proposed repair earned reuse? | [3. Beyond Static Gates: Closing the Detect–Fix–Learn Loop in Agentic CI/CD Quality Assurance](https://doi.org/10.18535/ijecs.v15i07.5577) |
+| Which consumers need revalidation after a provider change? | [4. Cross-Repository Contract Testing and Change Impact Analysis in Microservice CI/CD: An Agentic AI Approach](https://doi.org/10.18535/ijecs.v15i07.5599) · [Code](https://github.com/K11-Software-Solutions/k11techlab-microservice-qa-system) |
+| How much variability lies behind a verdict? | [5. Beyond Binary Verdicts: Aleatoric Uncertainty Quantification in Agentic CI/CD Quality Pipelines](https://doi.org/10.18535/ijecs.v15i07.5614) |
+| Which uncertainty source should trigger which review? | [6. Beyond a Single Threshold: Uncertainty Source Classification and Type-Stratified Conformal Prediction for Agentic CI/CD](https://doi.org/10.18535/ijecs.v15i08.5684) |
+
+[Autonomous QA pipelines module](../../../../QA%20Automation%20Mastery%20System/modules/15-autonomous-qa-pipelines.md) · [Agentic performance lab](../../../../practice-qa-projects/performance-testing-jmeter/10-agentic-qa-for-performance.md) · [AI-augmented testing](../ai-augmented-testing/README.md) · [Fundamentals guide](../README.md)
