@@ -17,13 +17,24 @@ const allTopics = () => data.modules.flatMap(m => m.topics.map(t => ({m,t})));
 const done = (m,t) => Boolean(state.lessons[key(m,t)]);
 const lessonLink = (m,t) => '<a class="item" href="'+route(m,t)+'">'+esc(t.title)+(done(m,t)?' · Completed':'')+'</a>';
 const back = '<a class="back" href="#/">← Curriculum</a>';
-function dashboard() {
-  const topics = allTopics(), count = topics.filter(({m,t})=>done(m,t)).length;
-  const next = topics.find(({m,t})=>!done(m,t)) || topics[0];
-  main.innerHTML = '<section class="hero"><div class="hero-copy"><h1>QA Automation Mastery</h1><p class="tagline">See the move every passing test missed.</p><p>'+data.weeks.length+' weeks · '+data.modules.length+' modules · '+topics.length+' lessons</p><a class="button" href="'+route(next.m,next.t)+'">'+(count===topics.length?'Review curriculum':count?'Continue learning':'Start learning')+' →</a></div><div class="chessboard" aria-hidden="true"><span class="queen">♛</span></div></section><div class="progress"><strong>Your progress</strong><progress aria-label="Lessons completed" value="'+count+'" max="'+topics.length+'"></progress><span>'+count+' of '+topics.length+' lessons</span></div><div class="row"><h2>Learning modules</h2><input aria-label="Search modules and topics" type="search" placeholder="Search modules and topics"></div><div id="results"></div>';
+const beginnerTrack = 'Fast Track QA Mastery for Beginners by AI Quality Queens';
+const professionalTrack = 'AI QA Mastery for Professionals by AI Quality Queens';
+function dashboard(professional = false) {
+  const topics = allTopics(), count = professional ? data.ai.filter(([, ,url])=>state.weeks['ai/'+url]).length : topics.filter(({m,t})=>done(m,t)).length;
+  const total = professional ? data.ai.length : topics.length;
+  const trackTitle = professional ? professionalTrack : beginnerTrack;
+  main.innerHTML = '<section class="hero"><div class="hero-copy"><h1>QA Automation Mastery</h1><p class="tagline">Choose your move. Master the game of AI quality assurance.</p><p>'+data.weeks.length+' weeks · '+data.modules.length+' modules · '+topics.length+' lessons</p><a class="button" href="#/planner">Start learning →</a></div><div class="chessboard" aria-hidden="true"><span class="queen">♛</span></div></section><section aria-label="Learning tracks"><h2>Choose your track</h2><div class="actions"><a class="button '+(professional?'secondary':'')+'" href="#/">'+beginnerTrack+'</a><a class="button '+(professional?'':'secondary')+'" href="#/track/professional">'+professionalTrack+'</a></div></section><h2>'+trackTitle+'</h2><div class="progress"><strong>Your progress</strong><progress aria-label="Lessons completed" value="'+count+'" max="'+total+'"></progress><span>'+count+' of '+total+' '+(professional?'modules':'lessons')+'</span></div><div class="row"><h2>Learning modules</h2><input aria-label="Search modules and topics" type="search" placeholder="Search modules and topics"></div><div id="results"></div>';
   const results = document.querySelector('#results');
   function search(query) {
     const q = query.trim().toLowerCase();
+    if (professional) {
+      const matches = data.ai.filter(([,title,,practice]) => (title+' '+practice).toLowerCase().includes(q));
+      results.innerHTML = (q ? '<p role="status">'+matches.length+' matching modules</p>' : '') +
+        '<div class="grid">'+matches.map(([,title,url,practice]) =>
+          '<a class="card" href="'+esc(url)+'"><h3>'+esc(title)+'</h3><p>'+esc(practice)+'</p><span class="meta">Open module ↗</span></a>'
+        ).join('')+'</div>';
+      return;
+    }
     if (q) {
       const hits = topics.filter(({m,t})=>[m.title,t.title,t.category].some(x=>x.toLowerCase().includes(q)));
       results.innerHTML = '<p role="status">'+hits.length+' matching lessons</p>'+hits.map(({m,t})=>'<a class="item" href="'+route(m,t)+'"><small>'+esc(m.title)+'</small><br>'+esc(t.title)+'</a>').join('');
@@ -36,7 +47,7 @@ function dashboard() {
 }
 function modulePage(m) {
   const categories = [...new Set(m.topics.map(t=>t.category))];
-  main.innerHTML=back+'<h1>'+esc(m.title)+'</h1><p>'+esc(m.description)+'</p><section class="panel"><h2>Practice assignment</h2>'+esc(m.practice)+'</section>'+categories.map(c=>'<h2>'+esc(c)+'</h2>'+m.topics.filter(t=>t.category===c).map(t=>lessonLink(m,t)).join('')).join('');
+  main.innerHTML=back+'<h1>'+esc(m.title)+'</h1><p>'+esc(m.description)+'</p>'+categories.map(c=>'<h2>'+esc(c)+'</h2>'+m.topics.filter(t=>t.category===c).map(t=>lessonLink(m,t)).join('')).join('')+'<section class="panel"><h2>Practice assignment</h2><p>'+esc(m.practice)+'</p></section>';
 }
 function lesson(m,t) {
   const topics=allTopics(), i=topics.findIndex(x=>x.t===t);
@@ -81,6 +92,7 @@ function render() {
   document.querySelectorAll('nav a').forEach(a=>{if(a.hash===('#/'+(['planner','flashcards'].includes(page)?page:'')))a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});
   const m=data.modules.find(x=>x.id===id),t=m?.topics.find(x=>x.id===topic);
   if(!page)dashboard();
+  else if(page==='track' && id==='professional')dashboard(true);
   else if(page==='planner')planner();
   else if(page==='flashcards' && (id===undefined || (/^\d+$/.test(id)&&Number(id)<data.cards.length)))flashcards(Number(id||0));
   else if(page==='module' && m && !topic)modulePage(m);
