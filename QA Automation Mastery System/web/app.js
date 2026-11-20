@@ -29,7 +29,7 @@ function dashboard() {
       results.innerHTML = '<p role="status">'+hits.length+' matching lessons</p>'+hits.map(({m,t})=>'<a class="item" href="'+route(m,t)+'"><small>'+esc(m.title)+'</small><br>'+esc(t.title)+'</a>').join('');
       return;
     }
-    results.innerHTML='<div class="grid">'+data.modules.map(m=>'<a class="card" href="'+route(m)+'"><span class="meta">WEEK '+esc(m.weeks)+'</span><h3>'+esc(m.title)+'</h3><p>'+esc(m.description)+'</p><span class="meta">'+m.topics.filter(t=>done(m,t)).length+' / '+m.topics.length+' lessons →</span></a>').join('')+'</div>';
+    results.innerHTML='<div class="grid">'+data.modules.map(m=>'<a class="card" href="'+route(m)+'"><h3>'+esc(m.title)+'</h3><p>'+esc(m.description)+'</p><span class="meta">'+m.topics.filter(t=>done(m,t)).length+' / '+m.topics.length+' lessons →</span></a>').join('')+'</div>';
   }
   document.querySelector('[type=search]').oninput=e=>search(e.target.value);
   search('');
