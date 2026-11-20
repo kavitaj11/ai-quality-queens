@@ -1,5 +1,7 @@
 # ♛ ai-quality-queens
 
+[![AI Quality Queens — Building expertise. Advancing trustworthy AI.](assets/aiqq-banner.webp)](https://kavitaj11.github.io/ai-quality-queens/#/)
+
 **AI Quality Queens** is a community learning guide for testers, from designing a first boundary test to evaluating an AI agent’s decisions. The QA Queens here are our sisters and mothers. They are also the colleagues who review a first test script, share what they learned from a failed run, or make time for someone rebuilding a career. Our primary goal is to help the QA community while challenging ourselves to learn something each day.
 
 ## Choose your starting position
@@ -30,6 +32,8 @@ Before moving your queen, ask yourself: *What can she threaten from here, and wh
 **Replay the position.** Chess players pause over a master game, choose a move, then study what happened. At your next QA Queens practice session, give a partner the requirement and the initial failure from a resolved bug. Keep the diagnosis hidden. Each of you writes down the check you would run next and what you expect to learn. Then reveal the original investigation and share a clue that changed your thinking.
 
 ## Make a move for the next learner
+
+<img src="assets/aiqq-logo.webp" width="112" alt="AI Quality Queens crown logo">
 
 Contributors at every level are welcome. A beginner who spots a missing setup step can make a tutorial easier for everyone who follows. An experienced tester can contribute a realistic failure case, a domain exercise, or an agent trace that shows how a plausible answer went wrong.
 
