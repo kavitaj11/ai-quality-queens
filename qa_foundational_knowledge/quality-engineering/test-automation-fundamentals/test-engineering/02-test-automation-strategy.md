@@ -1,5 +1,8 @@
 # Lesson 2 · Build a risk-based test strategy
 
+**QA Automation Mastery** · [00 · SDLC & Test Engineering](../../../../QA%20Automation%20Mastery%20System/modules/00-sdlc-test-engineering.md)  
+**Hands-on project** · [Select TestNG groups for a run](../../../../practice-qa-projects/selenium-java/05-testng-data-driven-and-parallel.md)
+
 > **Learning objective** · Turn a release objective into coverage, ownership and evidence.
 
 ## Frame the decision
@@ -34,4 +37,4 @@ Suppose the billing sandbox is down. A fixture can confirm the quote payload and
 
 The release date moves forward one week. Which checks would you protect? Prioritize the boundary calculation and quote-to-invoice journey because they cover the changed rule and financial impact. Record what was deferred, why, and who accepted that decision.
 
-[Previous: Automation basics](test-automation-basics.md) · [Study sequence](README.md#study-sequence) · [Next: Test script design](test-script-design.md)
+[Previous: Automation basics](01-test-automation-basics.md) · [Study sequence](README.md#study-sequence) · [Next: Test script design](03-test-script-design.md)

@@ -1,5 +1,8 @@
 # Lesson 4 · Design a test automation framework
 
+**QA Automation Mastery** · [13 · Test Automation System Design](../../../../QA%20Automation%20Mastery%20System/modules/13-test-automation-system-design.md)  
+**Hands-on project** · [Build a page-object framework](../../../../practice-qa-projects/selenium-java/04-page-objects-and-framework-design.md)
+
 > **Learning objective** · Trace a test through setup, execution, reporting and cleanup.
 
 ## Follow one checkout test
@@ -40,4 +43,4 @@ Exercise the framework itself with a fake cart client. Make it record created an
 
 Two workers pass independently but fail together when deleting the same cart. Which component should change? Give the fixture a unique cart per worker and delete only the ID it created. A longer timeout would leave the ownership problem in place.
 
-[Previous: Test script design](test-script-design.md) · [Study sequence](README.md#study-sequence) · [Next: Entry and exit criteria](test-entry-and-exit-criteria.md)
+[Previous: Test script design](03-test-script-design.md) · [Study sequence](README.md#study-sequence) · [Next: Entry and exit criteria](05-test-entry-and-exit-criteria.md)

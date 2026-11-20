@@ -1,5 +1,8 @@
 # Lesson 3 · Design reliable test scripts
 
+**QA Automation Mastery** · [01 · Foundations](../../../../QA%20Automation%20Mastery%20System/modules/01-foundations.md)  
+**Hands-on project** · [Design observable waits](../../../../practice-qa-projects/selenium-java/03-waits-and-synchronization.md)
+
 > **Learning objective** · Write a check that fails for the intended defect and explains the failure.
 
 ## Arrange, act, assert
@@ -41,4 +44,4 @@ Temporarily change the qualifying rule from `>= 5000` to `> 5000` in a practice 
 
 [Explore the Java boundary example](../../test-automation-in-java/examples/java/ShippingTest.java)
 
-[Previous: Risk-based strategy](test-automation-strategy.md) · [Study sequence](README.md#study-sequence) · [Next: Framework design](test-automation-framework.md)
+[Previous: Risk-based strategy](02-test-automation-strategy.md) · [Study sequence](README.md#study-sequence) · [Next: Framework design](04-test-automation-framework.md)

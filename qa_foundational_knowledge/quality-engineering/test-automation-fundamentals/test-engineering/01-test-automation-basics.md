@@ -1,5 +1,8 @@
 # Lesson 1 · Test automation basics
 
+**QA Automation Mastery** · [01 · Foundations](../../../../QA%20Automation%20Mastery%20System/modules/01-foundations.md)  
+**Hands-on project** · [Set up the Selenium project](../../../../practice-qa-projects/selenium-java/01-architecture-and-setup.md)
+
 > **Learning objective** · Choose a test level and data setup for a specific business risk.
 
 ## Start with one rule
@@ -37,4 +40,4 @@ A unit result isolates arithmetic. A service response can expose a cents-to-doll
 
 A change translates “Free shipping” incorrectly while the fee remains zero. Which check should fail? The browser assertion on the displayed message should detect the defect. A fee calculation test can correctly remain green.
 
-[Previous: Guide](README.md) · [Study sequence](README.md#study-sequence) · [Next: Risk-based strategy](test-automation-strategy.md)
+[Previous: Guide](README.md) · [Study sequence](README.md#study-sequence) · [Next: Risk-based strategy](02-test-automation-strategy.md)

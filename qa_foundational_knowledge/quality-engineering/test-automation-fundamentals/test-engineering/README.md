@@ -10,13 +10,13 @@ Keep a small evidence log with the rule version, input, expected result, observe
 
 ## Study sequence
 
-| Lesson | What to produce |
-|---|---|
-| 1. [Test automation basics](test-automation-basics.md) | Write one rule with inputs, an expected result and repeatable test data. |
-| 2. [Risk-based strategy](test-automation-strategy.md) | Rank the ways the rule could fail. Choose the test level that gives the clearest evidence. |
-| 3. [Test script design](test-script-design.md) | Separate setup, action and assertion. Make the failure message identify the input that failed. |
-| 4. [Framework design](test-automation-framework.md) | Decide where fixtures, clients, assertions and failure evidence belong. |
-| 5. [Entry and exit criteria](test-entry-and-exit-criteria.md) | Define when execution can begin and what evidence is needed for release. |
+| Lesson | What to produce | Mastery module | Hands-on project |
+|---|---|---|---|
+| 1. [Test automation basics](01-test-automation-basics.md) | Write one rule with inputs, an expected result and repeatable test data. | [01 · Foundations](../../../../QA%20Automation%20Mastery%20System/modules/01-foundations.md) | [Set up the Selenium project](../../../../practice-qa-projects/selenium-java/01-architecture-and-setup.md) |
+| 2. [Risk-based strategy](02-test-automation-strategy.md) | Rank the ways the rule could fail. Choose the test level that gives the clearest evidence. | [00 · SDLC & Test Engineering](../../../../QA%20Automation%20Mastery%20System/modules/00-sdlc-test-engineering.md) | [Select TestNG groups for a run](../../../../practice-qa-projects/selenium-java/05-testng-data-driven-and-parallel.md) |
+| 3. [Test script design](03-test-script-design.md) | Separate setup, action and assertion. Make the failure message identify the input that failed. | [01 · Foundations](../../../../QA%20Automation%20Mastery%20System/modules/01-foundations.md) | [Design observable waits](../../../../practice-qa-projects/selenium-java/03-waits-and-synchronization.md) |
+| 4. [Framework design](04-test-automation-framework.md) | Decide where fixtures, clients, assertions and failure evidence belong. | [13 · Test Automation System Design](../../../../QA%20Automation%20Mastery%20System/modules/13-test-automation-system-design.md) | [Build a page-object framework](../../../../practice-qa-projects/selenium-java/04-page-objects-and-framework-design.md) |
+| 5. [Entry and exit criteria](05-test-entry-and-exit-criteria.md) | Define when execution can begin and what evidence is needed for release. | [00 · SDLC & Test Engineering](../../../../QA%20Automation%20Mastery%20System/modules/00-sdlc-test-engineering.md) | [Inspect CI execution and reports](../../../../practice-qa-projects/selenium-java/07-api-setup-ci-grid-and-ai.md) |
 
 ## Worked decision
 

@@ -38,11 +38,11 @@ The final module is listed under [Interview prep](#interview-prep).
 
 [Open the test engineering study guide](test-engineering/README.md)
 
-- [Test automation basics](test-engineering/test-automation-basics.md)
-- [Test automation framework](test-engineering/test-automation-framework.md)
-- [Test script design](test-engineering/test-script-design.md)
-- [Test automation strategy](test-engineering/test-automation-strategy.md)
-- [Test entry and exit criteria](test-engineering/test-entry-and-exit-criteria.md)
+- [Test automation basics](test-engineering/01-test-automation-basics.md)
+- [Test automation framework](test-engineering/04-test-automation-framework.md)
+- [Test script design](test-engineering/03-test-script-design.md)
+- [Test automation strategy](test-engineering/02-test-automation-strategy.md)
+- [Test entry and exit criteria](test-engineering/05-test-entry-and-exit-criteria.md)
 
 ## AI-augmented testing
 

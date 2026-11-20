@@ -1,5 +1,8 @@
 # Lesson 5 · Use entry and exit criteria
 
+**QA Automation Mastery** · [00 · SDLC & Test Engineering](../../../../QA%20Automation%20Mastery%20System/modules/00-sdlc-test-engineering.md)  
+**Hands-on project** · [Inspect CI execution and reports](../../../../practice-qa-projects/selenium-java/07-api-setup-ci-grid-and-ai.md)
+
 > **Learning objective** · Decide whether a test phase can start or finish using evidence.
 
 ## Agree on evidence before execution
@@ -35,4 +38,4 @@ Example: “Hold candidate B17. Cart C42 qualified for free shipping at 5000 cen
 
 All executed tests pass, but the payment sandbox was unavailable. Can the end-to-end phase close? Check the agreed exit evidence. If payment completion is required, record the blocked journey and its owner. An exception requires an explicit decision and a plan to obtain the missing evidence.
 
-[Previous: Framework design](test-automation-framework.md) · [Study sequence](README.md#study-sequence) · [Finish the guide assignment](README.md#practice-assignment)
+[Previous: Framework design](04-test-automation-framework.md) · [Study sequence](README.md#study-sequence) · [Finish the guide assignment](README.md#practice-assignment)
