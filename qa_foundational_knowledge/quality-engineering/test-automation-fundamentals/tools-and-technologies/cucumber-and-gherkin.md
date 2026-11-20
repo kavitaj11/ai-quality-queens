@@ -2,6 +2,8 @@
 
 **Hands-on project** · [BDD with Cucumber lab](../../../../practice-qa-projects/selenium-java/06-bdd-with-cucumber.md)
 
+**QA Automation Mastery** · [08 · Frameworks & BDD](../../../../QA%20Automation%20Mastery%20System/modules/08-frameworks-bdd.md)
+
 > **Learning objective** · Express one business decision as executable examples.
 
 ## ◈ Describe the decision in domain language

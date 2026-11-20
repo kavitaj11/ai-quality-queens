@@ -4,11 +4,11 @@ Use three views of the same order to connect a business requirement to a browser
 
 ## Study sequence
 
-| Lesson | Question it helps answer | Hands-on project |
-|---|---|---|
-| 1. [Cucumber and Gherkin](cucumber-and-gherkin.md) | Can a product owner recognize the business rule in the example? | [BDD with Cucumber lab](../../../../practice-qa-projects/selenium-java/06-bdd-with-cucumber.md) |
-| 2. [Selenium WebDriver](selenium-webdriver.md) | Can a customer complete the interaction and see its outcome? | [Selenium with Java practice project](../../../../practice-qa-projects/selenium-java/) |
-| 3. [SQL for testers](sql-for-testers.md) | Did the application save the expected state for this order? | [SQL and data pipeline testing lab](../../../../practice-qa-projects/data-quality-testing-lab/) |
+| Lesson | Question it helps answer | Hands-on project | QA Automation Mastery |
+|---|---|---|---|
+| 1. [Cucumber and Gherkin](cucumber-and-gherkin.md) | Can a product owner recognize the business rule in the example? | [BDD with Cucumber lab](../../../../practice-qa-projects/selenium-java/06-bdd-with-cucumber.md) | [08 · Frameworks & BDD](../../../../QA%20Automation%20Mastery%20System/modules/08-frameworks-bdd.md) |
+| 2. [Selenium WebDriver](selenium-webdriver.md) | Can a customer complete the interaction and see its outcome? | [Selenium with Java practice project](../../../../practice-qa-projects/selenium-java/) | [06 · Selenium](../../../../QA%20Automation%20Mastery%20System/modules/06-selenium.md) |
+| 3. [SQL for testers](sql-for-testers.md) | Did the application save the expected state for this order? | [SQL and data pipeline testing lab](../../../../practice-qa-projects/data-quality-testing-lab/) | [02 · Test Harness Setup](../../../../QA%20Automation%20Mastery%20System/modules/02-test-harness-setup.md) · [Database validation](../../../../QA%20Automation%20Mastery%20System/lessons/02-test-harness-setup/14-database-validation.md) |
 
 ## Worked example
 
@@ -42,4 +42,4 @@ The expected rows are `QA-104 | confirmed` and `QA-105 | draft`. In an integrate
 
 Produce one scenario, one browser assertion and one database assertion for this rule. Explain how you would interpret a passing browser check alongside a row that still says “draft.” If persistence is asynchronous, specify the agreed time limit before treating the mismatch as a failure.
 
-[Related mastery module](../../../../QA%20Automation%20Mastery%20System/modules/08-frameworks-bdd.md) · [Fundamentals training guide](../README.md)
+[Fundamentals training guide](../README.md)

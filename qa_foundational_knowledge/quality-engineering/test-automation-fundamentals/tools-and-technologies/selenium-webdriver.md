@@ -2,6 +2,8 @@
 
 **Hands-on project** · [Selenium with Java practice project](../../../../practice-qa-projects/selenium-java/)
 
+**QA Automation Mastery** · [06 · Selenium](../../../../QA%20Automation%20Mastery%20System/modules/06-selenium.md)
+
 > **Learning objective** · Synchronize a browser assertion with the result a shopper actually sees.
 
 ## ◈ Trace a browser interaction

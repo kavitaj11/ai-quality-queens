@@ -2,6 +2,8 @@
 
 **Hands-on project** · [SQL and data pipeline testing lab](../../../../practice-qa-projects/data-quality-testing-lab/)
 
+**QA Automation Mastery** · [02 · Test Harness Setup](../../../../QA%20Automation%20Mastery%20System/modules/02-test-harness-setup.md) · [Database validation](../../../../QA%20Automation%20Mastery%20System/lessons/02-test-harness-setup/14-database-validation.md)
+
 > **Learning objective** · Design a small dataset that exposes join, aggregation and ranking errors.
 
 ## ◈ Lab setup · SQLite
