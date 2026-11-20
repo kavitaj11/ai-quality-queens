@@ -4,6 +4,8 @@
 
 **AI Quality Queens** is a community learning guide for testers, from designing a first boundary test to evaluating an AI agent’s decisions. The QA Queens here are our sisters and mothers. They are also the colleagues who review a first test script, share what they learned from a failed run, or make time for someone rebuilding a career. Our primary goal is to help the QA community while challenging ourselves to learn something each day.
 
+In AI assurance, we’re playing a game of chess whose winning strategies are still unknown. AI Quality Queens aims to become a powerful player by building the queen’s range: the skill and willingness to move in any direction. We develop that range before we need to defend the king—the system itself. That means learning to question a requirement, trace a failure across services, or challenge an agent’s verdict, so that when a risk emerges, we have more than one move available.
+
 ## Choose your starting position
 
 | Level | Responsibilities |
