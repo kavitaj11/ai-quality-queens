@@ -15,6 +15,8 @@
 
 [Explore the quality engineering guides](qa_foundational_knowledge/quality-engineering/README.md) · [Read about Kavita’s testing experience](qa_foundational_knowledge/README.md)
 
+AI quality requirements often begin with words like “helpful,” “accurate,” or “safe.” Those goals leave room for judgment: several answers may be acceptable, users may need different levels of detail, and a confident answer can do more harm than a request for clarification. The queen’s ability to move in any direction is a useful strategy for a tester working through that uncertainty. When people disagree about a good outcome, ask them to compare two plausible responses. When the goal is clear but results vary, repeat the evaluation. When the evidence is too thin for a release decision, pause and bring the question back to the people affected. What helps you stay effective as the system changes is knowing which question to pursue next and being willing to change direction when the evidence points elsewhere.
+
 ## The queen’s strategy for AI quality
 
 AI systems can be nondeterministic. Give an assistant the same checkout requirement twice and it may generate different test cases, choose different tools, or reach the same verdict for different reasons. One successful run tells you what happened once. To judge reliability, repeat the task under recorded conditions and ask which outcomes must hold on every run.
