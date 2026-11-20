@@ -4,8 +4,9 @@ Practice explaining a testing decision from your own experience. Bring one proje
 
 ## Study sequence
 
-1. [Behavioral and hypothetical interview questions](behavioral-and-hypothetical-interview-questions.md) — rehearse a cross-team decision, a missed deadline or a professional goal. Identify what you personally decided and what you learned.
-2. [Questions to ask the interviewer](questions-to-ask-the-interviewer.md) — invite the team to describe a recent release decision. Use the answer to ask who reviewed the evidence and how the team handled uncertainty.
+1. **Technical interview** — start with the [automation live-coding exercise](../../../../QA%20Automation%20Mastery%20System/lessons/17-interview-prep/02-automation-live-coding.md), then practice explaining your design choices using the [automation and distributed systems questions](behavioral-and-hypothetical-interview-questions.md#automation-and-distributed-systems).
+2. [Behavioral and hypothetical interview questions](behavioral-and-hypothetical-interview-questions.md) — rehearse a cross-team decision, a missed deadline or a professional goal. Identify what you personally decided and what you learned.
+3. [Questions to ask the interviewer](questions-to-ask-the-interviewer.md) — invite the team to describe a recent release decision. Use the answer to ask who reviewed the evidence and how the team handled uncertainty.
 
 ## Choose a rehearsal focus
 
