@@ -1,5 +1,7 @@
 # QA Automation Mastery System
 
+[![QA Automation Mastery — Choose your move. Master the game of AI quality assurance. Open the learning planner.](assets/mastery-banner.svg)](planner.md)
+
 Follow the [18-week beginner planner and AI QA mastery track](planner.md) for a weekly sequence, or choose a module below for focused practice. Each week covers one module in curriculum order. Each module links to its categorized lessons and a practice assignment. Browse all **269 topic entries**, or use the [19 review flashcards](flashcards.md) for recall practice.
 
 | Schedule | Module | Description |

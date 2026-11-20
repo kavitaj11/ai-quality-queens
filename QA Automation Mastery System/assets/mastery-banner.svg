@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="240" viewBox="0 0 1000 240" role="img" aria-labelledby="title desc">
+  <title id="title">AI Quality Queens — QA Automation Mastery</title>
+  <desc id="desc">A gold queen on a black-and-white chessboard beside the curriculum title and tagline.</desc>
+  <defs><pattern id="board" width="48" height="48" patternUnits="userSpaceOnUse" x="776" y="24"><rect width="48" height="48" fill="white"/><path d="M0 0h24v24H0z M24 24h24v24H24z" fill="#171717"/></pattern></defs>
+  <rect width="1000" height="240" rx="12" fill="#133f36"/>
+  <g font-family="Georgia,serif">
+    <text x="40" y="54" fill="#f4c680" font-size="23">AI Quality Queens</text>
+    <text x="38" y="115" fill="white" font-size="54" font-weight="bold">QA Automation Mastery</text>
+    <text x="40" y="162" fill="#ffdaa5" font-size="24" font-style="italic">Choose your move. Master the game of AI quality assurance.</text>
+    <text x="40" y="208" fill="white" font-size="18">Open the learning planner →</text>
+  </g>
+  <rect x="774" y="22" width="196" height="196" fill="#efc078"/>
+  <rect x="776" y="24" width="192" height="192" fill="url(#board)"/>
+  <g transform="translate(819 57)" fill="#f4c680" stroke="#382817" stroke-width="3" stroke-linejoin="round">
+    <path d="m6 35 22 18 1-37 17 33 9-44 10 44 18-33-1 37 23-18-16 44H23z"/>
+    <g><circle cx="6" cy="33" r="5"/><circle cx="28" cy="14" r="5"/><circle cx="55" cy="5" r="5"/><circle cx="84" cy="14" r="5"/><circle cx="105" cy="33" r="5"/></g>
+    <path d="M23 79h66v9H23z M30 88h52q-8 14 7 23H23q15-9 7-23z M23 111h66l5 10H18z"/>
+  </g>
+</svg>
