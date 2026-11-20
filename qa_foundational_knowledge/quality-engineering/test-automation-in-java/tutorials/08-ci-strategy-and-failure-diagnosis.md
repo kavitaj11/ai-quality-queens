@@ -2,6 +2,14 @@
 
 **Advanced** · [Guide and prerequisites](../README.md) · [Worked example](../examples/ci/check.yml)
 
+## Design a pipeline that explains its verdict
+
+A CI gate turns process results into a decision about a particular revision. Order checks by dependency, feedback time and diagnostic value. A compilation failure prevents execution; a fixture failure prevents an assertion; an assertion failure supplies evidence about behavior. Report the stage reached so reviewers know which claim the run actually evaluated.
+
+If a parser suite fails only on one worker, retain the input, revision, runtime version, locale and first failing assertion. Replaying those conditions can distinguish a locale-dependent defect from a transient setup problem. A passing retry is a second observation. Keeping both attempts helps the team decide whether a code fix, an environment correction or further investigation is warranted.
+
+## Apply the concepts in the lab
+
 The sample workflow compiles and runs the Java boundary suite first, then runs the Cucumber examples. A nonzero exit fails the job. Maven reports are collected on failure when available. A failure before Maven starts will have only the job log. The sample is stored with the examples so you can inspect it before enabling it.
 
 ## Run the example

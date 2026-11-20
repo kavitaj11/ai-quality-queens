@@ -2,6 +2,14 @@
 
 [Java automation guide](../README.md) · [Shipping rule](../examples/java/Shipping.java) · [Executable test](../examples/java/ShippingTest.java)
 
+## How a Java program becomes an automated check
+
+Java source declares classes and methods. The compiler checks types and produces bytecode; the Java Virtual Machine loads those classes and executes them. A method signature tells you what inputs a caller can supply. The return type tells you what kind of value to inspect. The requirement tells you which value is correct. An exception is also an observable outcome when the contract calls for rejecting an input.
+
+Think of a filename validator that returns a boolean. Compiling a call with a String establishes that its type is acceptable. Only an assertion against a known valid or invalid filename establishes whether the validator made the right decision. Store inputs beside their expected outcomes, invoke the method for each case, and include the input in the failure message so a teammate can repeat the check.
+
+## Apply the concepts in the lab
+
 Your first assignment is to check a checkout rule. Shipping costs 499 cents below a subtotal of 5,000 cents, becomes free at 5,000 cents, and rejects negative subtotals. By the end of this lesson you can run the check, read its Java code, and explain a boundary failure.
 
 ## 1. Compile and run your first check

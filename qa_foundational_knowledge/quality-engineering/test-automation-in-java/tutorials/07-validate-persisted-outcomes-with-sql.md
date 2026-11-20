@@ -2,6 +2,14 @@
 
 **Advanced** · [Guide and prerequisites](../README.md) · [Worked example](../examples/sql/shipping.sql)
 
+## Query the invariant at the right grain
+
+First define what one row represents and which key identifies the entity under test. Then translate the business invariant into a query that returns violations. An empty result supports a pass only after confirming that the intended fixture exists and that the query examined the required population.
+
+For a notification service, suppose each scheduled reminder must produce exactly one delivery receipt. Start from expected reminders, left join receipts by reminder ID, group by reminder and count a non-null receipt key. Both zero and two receipts violate the rule. Starting from receipts alone hides missing deliveries. Before trusting the check, seed a known duplicate and a missing receipt and predict which identifiers the query should return.
+
+## Apply the concepts in the lab
+
 A correct browser message cannot establish what was stored. The SQL fixture includes four order rows and derives the expected fee independently from the requirement. Its query returns exceptions, making an empty result a clear acceptance condition on clean input.
 
 ## Run the example

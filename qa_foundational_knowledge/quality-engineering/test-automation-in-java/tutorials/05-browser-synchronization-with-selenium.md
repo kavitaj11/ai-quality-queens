@@ -2,6 +2,14 @@
 
 **Intermediate** · [Guide and prerequisites](../README.md) · [Worked example](../examples/selenium/ShippingBrowser.java)
 
+## Synchronize with a state transition
+
+Browser commands and application work follow different timelines. A click can complete while a request, debounce timer or render is still pending. An explicit wait polls an observable condition within a time limit. Its usefulness depends on whether the condition distinguishes the new state from the old one.
+
+For an asynchronously filtered directory, a visible results panel might already contain yesterday’s selection. Wait for the selected filter and an expected result belonging to it. Issue the user action once and keep polling free of side effects. If the deadline expires, record the last observed filter and result so the failure distinguishes stale content from a missing panel.
+
+## Apply the concepts in the lab
+
 WebDriver sends a click before the asynchronous quote finishes. The local page briefly displays Calculating… . An element-presence check would succeed even before the quote arrives. The explicit wait repeatedly reads the status text and succeeds only when the qualifying subtotal has produced Free shipping.
 
 ## Run the example
