@@ -41,6 +41,10 @@ Contributors at every level are welcome. A beginner who spots a missing setup st
 
 [Read the contribution guidelines](CONTRIBUTING.md) for lesson structure, verification, and pull request expectations.
 
+## Citation
+
+Kavita Jadhav. (2026). kavitaj11/ai-quality-queens: AI Quality Queens v1.0.0 — QA Automation Mastery System (Version v1.0.0) [Computer software]. Zenodo. [https://doi.org/10.5281/zenodo.24384800](https://doi.org/10.5281/zenodo.24384800)
+
 ## License
 
 The code examples use the MIT License. The training materials use Creative Commons Attribution 4.0 International (CC BY 4.0). See the [license and attribution guide](LICENSE).
