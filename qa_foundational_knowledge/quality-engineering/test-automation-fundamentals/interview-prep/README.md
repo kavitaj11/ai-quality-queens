@@ -7,6 +7,10 @@ Practice explaining a testing decision from your own experience. Bring one proje
 1. [Behavioral and hypothetical interview questions](behavioral-and-hypothetical-interview-questions.md) — rehearse a cross-team decision, a missed deadline or a professional goal. Identify what you personally decided and what you learned.
 2. [Questions to ask the interviewer](questions-to-ask-the-interviewer.md) — invite the team to describe a recent release decision. Use the answer to ask who reviewed the evidence and how the team handled uncertainty.
 
+## Choose a rehearsal focus
+
+Use the [15 candidate scenarios](behavioral-and-hypothetical-interview-questions.md#scenario-question-bank) to rehearse test design, automation, release judgment and AI evaluation. Then select from [10 questions for the hiring team](questions-to-ask-the-interviewer.md#questions-about-how-the-team-works) to learn how those decisions work in practice.
+
 ## Worked example
 
 Suppose a regression suite missed its release window. “We improved automation” leaves the listener guessing. Describe which checks were delayed, how you chose what to run first, and what risk the team accepted. Use a measured outcome when you have one. If you lack a baseline, explain how you would collect it.
