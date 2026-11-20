@@ -28,11 +28,15 @@ The final module is listed under [Interview prep](#interview-prep).
 
 ## Tools and technologies
 
+[Open the tools and technologies study guide](tools-and-technologies/README.md)
+
 - [Selenium WebDriver](tools-and-technologies/selenium-webdriver.md)
 - [Cucumber and Gherkin](tools-and-technologies/cucumber-and-gherkin.md)
 - [SQL for testers](tools-and-technologies/sql-for-testers.md)
 
 ## Test engineering
+
+[Open the test engineering study guide](test-engineering/README.md)
 
 - [Test automation basics](test-engineering/test-automation-basics.md)
 - [Test automation framework](test-engineering/test-automation-framework.md)
@@ -49,6 +53,8 @@ The final module is listed under [Interview prep](#interview-prep).
 - [Agentic AI testing overview](agentic-ai-testing/README.md)
 
 ## Interview prep
+
+[Open the interview prep study guide](interview-prep/README.md)
 
 - [17 · Interview Prep](../../../QA%20Automation%20Mastery%20System/modules/17-interview-prep.md)
 - [Behavioral and hypothetical interview questions](interview-prep/behavioral-and-hypothetical-interview-questions.md)
