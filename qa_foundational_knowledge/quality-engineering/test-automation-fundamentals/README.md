@@ -26,36 +26,36 @@ Follow the [weekly planner](../../../QA%20Automation%20Mastery%20System/planner.
 
 The final module is listed under [Interview prep](#interview-prep).
 
-## Tools and technologies
-
-[Open the tools and technologies study guide](tools-and-technologies/README.md)
-
-- [Selenium WebDriver](tools-and-technologies/selenium-webdriver.md)
-- [Cucumber and Gherkin](tools-and-technologies/cucumber-and-gherkin.md)
-- [SQL for testers](tools-and-technologies/sql-for-testers.md)
-
 ## Test engineering
 
-[Open the test engineering study guide](test-engineering/README.md)
+[Open the test engineering study guide](01-test-engineering/README.md)
 
-- [Test automation basics](test-engineering/01-test-automation-basics.md)
-- [Test automation framework](test-engineering/04-test-automation-framework.md)
-- [Test script design](test-engineering/03-test-script-design.md)
-- [Test automation strategy](test-engineering/02-test-automation-strategy.md)
-- [Test entry and exit criteria](test-engineering/05-test-entry-and-exit-criteria.md)
+- [Test automation basics](01-test-engineering/01-test-automation-basics.md)
+- [Test automation strategy](01-test-engineering/02-test-automation-strategy.md)
+- [Test script design](01-test-engineering/03-test-script-design.md)
+- [Test automation framework](01-test-engineering/04-test-automation-framework.md)
+- [Test entry and exit criteria](01-test-engineering/05-test-entry-and-exit-criteria.md)
+
+## Tools and technologies
+
+[Open the tools and technologies study guide](02-tools-and-technologies/README.md)
+
+- [Selenium WebDriver](02-tools-and-technologies/selenium-webdriver.md)
+- [Cucumber and Gherkin](02-tools-and-technologies/cucumber-and-gherkin.md)
+- [SQL for testers](02-tools-and-technologies/sql-for-testers.md)
 
 ## AI-augmented testing
 
-- [AI-augmented testing overview](ai-augmented-testing/README.md)
+- [AI-augmented testing overview](03-ai-augmented-testing/README.md)
 
 ## Agentic AI testing
 
-- [Agentic AI testing overview](agentic-ai-testing/README.md)
+- [Agentic AI testing overview](04-agentic-ai-testing/README.md)
 
 ## Interview prep
 
-[Open the interview prep study guide](interview-prep/README.md)
+[Open the interview prep study guide](05-interview-prep/README.md)
 
 - [17 · Interview Prep](../../../QA%20Automation%20Mastery%20System/modules/17-interview-prep.md)
-- [Behavioral and hypothetical interview questions](interview-prep/behavioral-and-hypothetical-interview-questions.md)
-- [Questions to ask the interviewer](interview-prep/questions-to-ask-the-interviewer.md)
+- [Behavioral and hypothetical interview questions](05-interview-prep/behavioral-and-hypothetical-interview-questions.md)
+- [Questions to ask the interviewer](05-interview-prep/questions-to-ask-the-interviewer.md)

@@ -39,4 +39,4 @@ Build a held-out set of reviewed cases, including correct changes, known regress
 
 Choose three rows from different layers. For each, submit a risk, generated candidate, independent oracle, failing fixture and reviewer decision. Exchange fixtures with another learner. A completed review explains why the corrected check distinguishes the valid and invalid outcomes and which uncertainty still needs a person.
 
-[Research reading path and six papers](../agentic-ai-testing/README.md#research-reading-path) · [AI-augmented QA module](../../../../QA%20Automation%20Mastery%20System/modules/14-ai-augmented-qa.md) · [Performance reporting lab](../../../../practice-qa-projects/performance-testing-jmeter/09-ai-augmented-performance-testing.md) · [Fundamentals guide](../README.md)
+[Research reading path and six papers](../04-agentic-ai-testing/README.md#research-reading-path) · [AI-augmented QA module](../../../../QA%20Automation%20Mastery%20System/modules/14-ai-augmented-qa.md) · [Performance reporting lab](../../../../practice-qa-projects/performance-testing-jmeter/09-ai-augmented-performance-testing.md) · [Fundamentals guide](../README.md)
