@@ -2,7 +2,7 @@
 
 [![QA Automation Mastery — Choose your move. Master the game of AI quality assurance. Open the learning planner.](assets/mastery-banner.svg)](planner.md)
 
-Follow the [18-week beginner planner and AI QA mastery track](planner.md) for a weekly sequence, or choose a module below for focused practice. Each week covers one module in curriculum order. Each module links to its categorized lessons and a practice assignment. Browse all **269 topic entries**, or use the [19 review flashcards](flashcards.md) for recall practice.
+Follow the [18-week beginner planner and AI QA mastery track](planner.md) for a weekly sequence, or choose a module below for focused practice. Each week covers one module in curriculum order. Each module links to its categorized lessons and a practice assignment. Browse all **260 topic entries**, or use the [19 review flashcards](flashcards.md) for recall practice.
 
 | Schedule | Module | Description |
 |---|---|---|
@@ -23,7 +23,7 @@ Follow the [18-week beginner planner and AI QA mastery track](planner.md) for a 
 | Week 15 | [14 · AI-Augmented QA](modules/14-ai-augmented-qa.md) | Explore assisted test generation, flaky-test triage, self-healing locators, Healenium and visual testing platforms. Evaluate the evidence behind a proposed repair. |
 | Week 16 | [15 · Autonomous QA Pipelines](modules/15-autonomous-qa-pipelines.md) | Trace a detect–fix–learn loop through planning, execution and review. Study agent tests, MCP tools, audit records, LangGraph orchestration and cross-repository impact analysis. |
 | Week 17 | [16 · AI Testing & LLM Evaluation](modules/16-ai-testing-llm-evaluation.md) | Build evaluation datasets and rubrics, compare deterministic checks with model judges, and evaluate retrieval separately from generation. Connect eval results to CI gates or GitHub App checks. |
-| Week 18 | [17 · Interview Prep](modules/17-interview-prep.md) | Practice coding, framework design and evidence-based QA stories. Apply them to a financial trading transfer, SQL validation, failure diagnosis, regression selection and handoff. |
+| Week 18 | [17 · Interview Prep](modules/17-interview-prep.md) | Practice coding, framework design and evidence-based QA stories. |
 
 The lesson pages include the default displayed reference or example. For alternate language tabs and interactive quizzes, the [interactive source artboard](https://claude.ai/artifact/HM3XUAEuQ29DSb9ckCWt6s#artboard-787b4c38acdc) provides the original interactive experience.
 
