@@ -1,8 +1,8 @@
 # QA Automation Mastery System
 
-Follow the [24-week planner](planner.md) for a weekly sequence, or choose a module below for focused practice. The modules retain the artboard’s numbering and overlapping study windows. Each module links to its categorized lessons and a practice assignment. Browse all **269 topic entries**, or use the [19 review flashcards](flashcards.md) for recall practice.
+Follow the [18-week beginner planner and AI QA mastery track](planner.md) for a weekly sequence, or choose a module below for focused practice. The modules retain the artboard’s numbering and overlapping study windows. Each module links to its categorized lessons and a practice assignment. Browse all **269 topic entries**, or use the [19 review flashcards](flashcards.md) for recall practice.
 
-| Module | Week(s) |
+| Module | Original artboard week(s) |
 |---|---|
 | [00 · SDLC & Test Engineering](modules/00-sdlc-test-engineering.md) | 5–6 |
 | [01 · Foundations](modules/01-foundations.md) | 1–3 |

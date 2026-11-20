@@ -50,8 +50,25 @@ function lesson(m,t) {
   button.onclick=()=>{state.lessons[key(m,t)]=!done(m,t);save();update();};update();
 }
 function planner() {
-  main.innerHTML=back+'<h1>Weekly planner</h1><p>Check off a week when you have a test result, trace, or design note to show for it.</p>'+data.weeks.map(([n,s])=>'<label class="item"><input type="checkbox" value="'+n+'" '+(state.weeks[n]?'checked':'')+'><strong>Week '+n+'</strong> · '+esc(s)+'</label>').join('');
-  main.querySelectorAll('input').forEach(input=>input.onchange=()=>{state.weeks[input.value]=input.checked;save();});
+  function checklistRow(key, label, title, href, practice) {
+    const checked = state.weeks[key] ? ' checked' : '';
+    return '<div class="item"><label><input type="checkbox" value="'+esc(key)+'"'+checked+
+      ' aria-label="'+esc('Complete '+label+' · '+title)+'"><strong>'+esc(label)+
+      '</strong></label> · <a href="'+esc(href)+'">'+esc(title)+'</a><p>'+esc(practice)+'</p></div>';
+  }
+  const weeks = data.weeks.map(([week,title,id]) => {
+    const module = data.modules.find(m => m.id === id);
+    return checklistRow('fast/'+id, 'Week '+week, title, route(module), module.practice);
+  });
+  const articles = data.ai.map(([number,title,url,practice]) =>
+    checklistRow('ai/'+url, 'AI '+number, title, url, practice));
+  main.innerHTML = back+'<h1>Fast-track QA mastery</h1><h2>18 weeks for beginners</h2>'+
+    '<p>Study one module each week. Start with one programming language, try a worked example, and check off the week when you finish its practice assignment.</p>'+
+    weeks.join('')+'<h2>AI QA mastery</h2><p>Continue at your own pace with Kavita Jadhav’s <a href="https://github.com/K11-Software-Solutions/becoming-ai-quality-engineer">Becoming an AI Quality Engineer</a>. Follow the eight core articles, then deepen your evaluation practice with three advanced modules.</p>'+
+    articles.join('')+'<a href="https://github.com/K11-Software-Solutions/becoming-ai-quality-engineer#the-series">Explore the wider K11 AI quality lab series →</a>';
+  main.querySelectorAll('input').forEach(input => {
+    input.onchange = () => {state.weeks[input.value] = input.checked; save();};
+  });
 }
 function flashcards(i) {
   const c=data.cards[i];

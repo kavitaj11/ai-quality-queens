@@ -66,14 +66,16 @@ def build():
         category, content = section.split("\n", 1)
         for q, a in re.findall(r"<summary>(.*?)</summary>\s*(.*?)\s*</details>", content, re.S):
             cards.append(dict(category=category, question=html.unescape(q), answer=a))
-    weeks = re.findall(r"^- \[ \] \*\*Week (\d+)\*\* · (.+)$",
-                       (ROOT / "planner.md").read_text(), re.M)
-    if not weeks or not cards:
-        raise ValueError("Missing planner or flashcard content")
+    curriculum = modules()
+    plan = (ROOT / "planner.md").read_text()
+    weeks = re.findall(r"^- \[ \] \*\*Week (\d+)\*\* · \[([^\]]+)\]\(modules/([^/)]+)\.md\)$", plan, re.M)
+    ai = re.findall(r"^- \[ \] \*\*AI (\d+)\*\* · \[([^\]]+)\]\((https://github\.com/[^)]+)\) · (.+)$", plan, re.M)
+    if [row[2] for row in weeks] != [m["id"] for m in curriculum] or not ai or not cards:
+        raise ValueError("Check planner module links, AI articles and flashcards")
     OUTPUT.mkdir(parents=True, exist_ok=True)
     for name in ("index.html", "app.js", "style.css"):
         shutil.copyfile(WEB / name, OUTPUT / name)
-    data = dict(modules=modules(), weeks=weeks, cards=cards)
+    data = dict(modules=curriculum, weeks=weeks, ai=ai, cards=cards)
     (OUTPUT / "curriculum.json").write_text(json.dumps(data, ensure_ascii=False))
     (OUTPUT / ".nojekyll").touch()
 
