@@ -1,6 +1,6 @@
 # QA Automation Mastery System
 
-Follow the [24-week planner](planner.md) for a weekly sequence, or choose a module below for focused practice. The modules retain the artboard’s numbering and overlapping study windows. Each page pairs a summary of the source material with a suggested practice assignment.
+Follow the [24-week planner](planner.md) for a weekly sequence, or choose a module below for focused practice. The modules retain the artboard’s numbering and overlapping study windows. Each module links to its categorized lessons and a practice assignment. Browse all **269 topic entries**, or use the [19 review flashcards](flashcards.md) for recall practice.
 
 | Module | Week(s) |
 |---|---|
@@ -23,4 +23,4 @@ Follow the [24-week planner](planner.md) for a weekly sequence, or choose a modu
 | [16 · AI Testing & LLM Evaluation](modules/16-ai-testing-llm-evaluation.md) | 23–24 |
 | [17 · Interview Prep](modules/17-interview-prep.md) | 24 |
 
-The [interactive source artboard](https://claude.ai/artifact/HM3XUAEuQ29DSb9ckCWt6s#artboard-787b4c38acdc) contains the detailed topic walkthroughs, language examples, quizzes, flashcards and progress tracking.
+The lesson pages include the default displayed reference or example. For alternate language tabs and interactive quizzes, the [interactive source artboard](https://claude.ai/artifact/HM3XUAEuQ29DSb9ckCWt6s#artboard-787b4c38acdc) provides the original interactive experience.
