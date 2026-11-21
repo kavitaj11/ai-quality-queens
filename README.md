@@ -39,6 +39,10 @@ Try those moves on one puzzle. An assistant marks checkout as passing because th
 
 During a layoff or a difficult hiring cycle, a few quiet minutes of mindfulness or meditation can help you choose a manageable task. Trace one failed check, ask a colleague to review your reasoning, or take time to rest. This community makes room to give and receive that support.
 
+## Free tools
+
+**[Build vs. Buy Scorecard](free-tools/build-vs-buy-scorecard/README.md).** Deciding whether to build a test platform, an evaluation service or another capability, or to buy one? Score both options on ten weighted criteria and tag each score as evidence or assumption, so you can see which parts of the answer still need a check. The full Build vs. Buy Decision Kit adds a 3-year cost model, a vendor-risk checklist, an exit plan and a decision record.
+
 ## Make a move for the next learner
 
 <img src="assets/aiqq-logo.webp" width="112" alt="AI Quality Queens crown logo">
